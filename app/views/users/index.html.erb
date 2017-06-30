@@ -8,16 +8,11 @@
 		<td><%= contract.ticker %></td>
 	</tr><br>
 	<tr>
-		<% if contract.bought_at %>
-			<td>Bought at: </td>
-			<td>$<%= contract.bought_at %></td>
-			<td> on <%= contract.created_at %></td>
-	</tr>
-	<tr>
-		<% elsif contract.sold_at %>
-			<td>Sold at: </td>
-			<td>$<%= contract.sold_at %></td>
-			<td> on <%= contract.created_at %></td>
+		<% if contract.strike_price %>
+			<td>Strike Price: </td>
+			<td>$<%= contract.strike_price %></td>
+			<td> on <%= contract.created_at.time %></td>
+			<td> with an expiration time of <%= contract.created_at.time + 15*60 %></td>
 	</tr>
 		<% end %>
 	</tr>
