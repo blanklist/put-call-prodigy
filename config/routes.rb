@@ -3,6 +3,11 @@ Rails.application.routes.draw do
 
   resources :positions, :users
 
-  root 'welcome#index'
+#Need to add more "excepts" to sessions
 
+  get "logout" => "sessions#destroy", :as => "logout"
+  get "login" => "sessions#new", :as => "login"
+  post "login" => "sessions#create"
+
+  root 'welcome#index'
 end
