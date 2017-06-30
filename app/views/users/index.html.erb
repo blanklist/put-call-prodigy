@@ -3,21 +3,21 @@
 <% @users.each do |user| %>
 <p>
 	<%= user.username %><br>
-	<% user.positions.each do |position| %>
+	<% user.contracts.each do |contract| %>
 	<tr>
-		<td><%= position.ticker %></td>
+		<td><%= contract.ticker %></td>
 	</tr><br>
 	<tr>
-		<% if position.bought_at %>
+		<% if contract.bought_at %>
 			<td>Bought at: </td>
-			<td>$<%= position.bought_at %></td>
-			<td> on <%= position.created_at %></td>
+			<td>$<%= contract.bought_at %></td>
+			<td> on <%= contract.created_at %></td>
 	</tr>
 	<tr>
-		<% elsif position.sold_at %>
+		<% elsif contract.sold_at %>
 			<td>Sold at: </td>
-			<td>$<%= position.sold_at %></td>
-			<td> on <%= position.created_at %></td>
+			<td>$<%= contract.sold_at %></td>
+			<td> on <%= contract.created_at %></td>
 	</tr>
 		<% end %>
 	</tr>
