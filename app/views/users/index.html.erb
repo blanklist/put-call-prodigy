@@ -1,0 +1,15 @@
+<h3>Uesr Index</h3>
+
+<% @users.each do |user| %>
+<p>
+	<%= @user.username %>
+	<% @user.positions.each do |position| %>
+	<tr>
+		<td><%= position.ticker %></td>
+		<% if position.bought_at %>
+			<td>Bought: <%= position.bought_at %> on <%= position.timestamps %></td>
+		<% elsif position.sold_at %>
+			<td>Sold: <%= position.sold_at %> on <%= position.timestamps %></td>
+		<% end %>
+	</tr>
+</p>
