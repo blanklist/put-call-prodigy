@@ -2,14 +2,25 @@
 
 <% @users.each do |user| %>
 <p>
-	<%= @user.username %>
-	<% @user.positions.each do |position| %>
+	<%= user.username %><br>
+	<% user.positions.each do |position| %>
 	<tr>
 		<td><%= position.ticker %></td>
+	</tr><br>
+	<tr>
 		<% if position.bought_at %>
-			<td>Bought: <%= position.bought_at %> on <%= position.timestamps %></td>
+			<td>Bought at: </td>
+			<td>$<%= position.bought_at %></td>
+			<td> on <%= position.created_at %></td>
+	</tr>
+	<tr>
 		<% elsif position.sold_at %>
-			<td>Sold: <%= position.sold_at %> on <%= position.timestamps %></td>
+			<td>Sold at: </td>
+			<td>$<%= position.sold_at %></td>
+			<td> on <%= position.created_at %></td>
+	</tr>
 		<% end %>
 	</tr>
+	<% end %>
 </p>
+<% end %>

@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
 	def index
-		redirect users_path
+		redirect_to users_path
 	end
 end	
