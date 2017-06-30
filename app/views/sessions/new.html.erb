@@ -9,5 +9,6 @@
     <%= label_tag :password %><br />
     <%= password_field_tag :password %>
   </p>
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
   <p class="button"><%= submit_tag "Log in" %></p>
 <% end %>
