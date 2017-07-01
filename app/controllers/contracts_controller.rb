@@ -1,6 +1,10 @@
 class ContractsController < ApplicationController
   def index
-    @contracts = current_user.contracts
+    if logged_in?
+      @contracts = current_user.contracts
+    else
+      redirect_to new_user_path
+    end
   end
 
   def new

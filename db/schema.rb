@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20170630215008) do
   create_table "contracts", force: :cascade do |t|
     t.string "ticker"
     t.integer "strike_price"
-    t.datetime "interval"
+    t.integer "interval"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
