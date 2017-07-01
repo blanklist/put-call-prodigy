@@ -1,0 +1,20 @@
+<h1>New Contract Page</h1>
+
+<%= form_for @contract do |f| %>
+  <p>
+    <%= f.label :ticker %>
+    <%= f.select(:ticker, [['APPL'], ['TSLA'], ['AMZN'], ['FB']], { :prompt => "Please select"}) %>
+  </p>
+  <p>
+    <%= f.label :strike_price %>
+    <%= f.number_field :strike_price %>
+  </p>
+  <p>
+    <%= f.label :interval %>
+    <%= f.text_field :interval %>
+  </p>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
