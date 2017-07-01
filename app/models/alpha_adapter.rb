@@ -1,6 +1,6 @@
 require 'httparty'
 
-class AlphaAdapter
+module AlphaAdapter
   include HTTParty
 
   def self.search(ticker)
@@ -16,6 +16,6 @@ class AlphaAdapter
 end
 
 
+#NOTES-----------------------
 # ENV['ALPHA_API']
-
 # up_function = function.split.join('_').upcase
