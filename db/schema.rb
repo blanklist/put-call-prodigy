@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20170630215008) do
   enable_extension "plpgsql"
 
   create_table "contracts", force: :cascade do |t|
-    t.string "figi"
+    t.string "ticker"
     t.integer "strike_price"
     t.datetime "interval"
     t.bigint "user_id"
