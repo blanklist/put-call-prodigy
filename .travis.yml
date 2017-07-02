@@ -1,0 +1,9 @@
+language: ruby
+rvm:
+ - 2.3.3
+
+services:
+ - postgresql
+
+before_script:
+ - psql -c 'create database put_call_prodigy_test;' -U postgres
