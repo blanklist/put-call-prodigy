@@ -34,9 +34,6 @@ gem 'bcrypt', '~> 3.1.7'
 
 #API STURFF
 gem 'httparty'
-gem 'quandl'
-gem 'quandl_client'
-gem 'json'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
