@@ -1,0 +1,11 @@
+language: ruby
+rvm:
+ - 2.2.6
+ - jruby
+ - rbx-2
+
+ services:
+  - postgresql
+
+  before_script:
+  - psql -c 'create database put_call_prodigy_test;' -U postgres
