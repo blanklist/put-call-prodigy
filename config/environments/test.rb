@@ -39,4 +39,7 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+ALPHA_API = "K8M3E4D6ZBNJHHHF"
+
 end

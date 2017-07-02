@@ -9,6 +9,7 @@ class ContractsController < ApplicationController
 
   def new
     @contract = Contract.new
+    # @asset = Asset.search(params[:ticker])
   end
 
   def create
