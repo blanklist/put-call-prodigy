@@ -1,10 +1,10 @@
 require 'httparty'
 
-module AlphaAdapter
+class AlphaAdapter
   include HTTParty
 
   def self.search(ticker)
-    api_key = 'T16XX6XEII8AXKZJ'
+    api_key = ''
     up_function = 'TIME_SERIES_INTRADAY'
     up_ticker = ticker.upcase
     interval = 1
