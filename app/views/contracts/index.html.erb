@@ -6,13 +6,14 @@
 
 <% @contracts.each do |contract| %>
   <tr>
-    <td><%= link_to contract.ticker, contract_path(contract, :price => price) %></td>
+    <td><%= link_to contract.ticker, contract_path(contract) %></td>
   </tr><br>
   <tr>
     <% if contract.strike_price %>
       <td>Strike Price: $<%= contract.strike_price %></td><br>
       <td>Created at: <%= contract.created_at.time %></td><br>
-      <td>Expiration time of <%= contract.expiration %></td><br>
+      <td>Expiration: <%= contract.expiration %></td><br>
+      <td>Spot Price: $<%= contract.spot_price %></td><br>
     <% end %>
   </tr><br>
 <% end %>

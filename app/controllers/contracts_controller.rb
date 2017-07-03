@@ -18,7 +18,8 @@ class ContractsController < ApplicationController
       adjusted_time = @contract.created_at - 4.hours
       formatted_time = adjusted_time.change(:sec => 0).strftime("%Y-%m-%d %H:%M:%S")
       price = Asset.get_price(@contract.ticker, formatted_time)
-      redirect_to contract_path(contract, :price => price)
+      @contract.update_attributes(:spot_price => price)
+      redirect_to contract_path(@contract)
     else
       flash[:notice] = "Form is invalid"
       render 'new'
@@ -27,11 +28,10 @@ class ContractsController < ApplicationController
 
   def show
     @contract = Contract.find(params[:id])
-    @price = params[:price]
   end
 
   private
   def contract_params
-    params.require(:contract).permit(:ticker, :strike_price, :interval, :user_id)
+    params.require(:contract).permit(:ticker, :strike_price, :spot_price, :interval, :user_id)
   end
 end

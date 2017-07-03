@@ -6,12 +6,13 @@
 </tr><br>
 <tr>
   <% if @contract.strike_price %>
-    <td>Strike Price: </td>
-    <td>$<%= @contract.strike_price %></td>
-    <td> on <%= @contract.created_at.time %></td>
-    <td> with an expiration time of <%= @contract.expiration %></td>
-</tr>
+    <td>Strike Price: $<%= @contract.strike_price %></td><br>
+    <td>Created at: <%= @contract.created_at.time %></td><br>
+    <td>Expiration: <%= @contract.expiration %></td><br>
+    <td>Spot Price: $<%= @contract.spot_price %></td><br>
   <% end %>
-<tr>
-  <td>Price at time of purchase: <%= @price %></td>
-</tr>
+</tr><br>
+
+<p>
+	<%= link_to 'Return to Contracts Index', contracts_path %>
+</p>
