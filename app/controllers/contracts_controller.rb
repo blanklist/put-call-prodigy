@@ -13,7 +13,9 @@ class ContractsController < ApplicationController
   end
 
   def create
-    @contract = Contract.new(contract_params)
+    p params[:contract]
+    ticker = Asset.get_by_ticker(params[:ticker], locals: {ticker => :ticker})
+    @contract = Contract.new(:ticker => ticker)
     if @contract.save
       redirect_to user_path(current_user)
     else

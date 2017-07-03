@@ -18,3 +18,14 @@
     <%= f.submit %>
   </p>
 <% end %>
+
+<%= form_for @contract do |f| %>
+  <p>
+    <%= f.label :ticker %>
+    <%= f.text_field :ticker %>
+  </p>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

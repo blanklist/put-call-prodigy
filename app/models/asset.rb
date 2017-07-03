@@ -1,6 +1,7 @@
 class Asset < ApplicationRecord
 
-  def get_by_ticker(ticker)
+  def self.get(ticker)
     AlphaAdapter.search(ticker)
   end
+
 end
