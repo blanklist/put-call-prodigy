@@ -3,7 +3,7 @@
 <%= form_for @contract do |f| %>
   <p>
     <%= f.label :ticker %>
-    <%= f.select(:ticker, [['APPL'], ['TSLA'], ['AMZN'], ['FB']], { :prompt => "Please select"}) %>
+    <%= f.text_field :ticker %>
   </p>
   <p>
     <%= f.label :strike_price %>
@@ -12,17 +12,6 @@
   <p>
     <%= f.label :interval %>
     <%= f.text_field :interval %>
-  </p>
-    <%= f.hidden_field :user_id, value: current_user.id %>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
-
-<%= form_for @contract do |f| %>
-  <p>
-    <%= f.label :ticker %>
-    <%= f.text_field :ticker %>
   </p>
     <%= f.hidden_field :user_id, value: current_user.id %>
   <p>
