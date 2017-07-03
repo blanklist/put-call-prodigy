@@ -13,7 +13,8 @@ class AlphaAdapter < Asset
     fwm = response.parsed_response
     p time
     p ticker
-    fwm["Time Series (1min)"]["time"]["4. close"]
+    p fwm
+    price = fwm["Time Series (1min)"][time]["4. close"]
   end
 end
 

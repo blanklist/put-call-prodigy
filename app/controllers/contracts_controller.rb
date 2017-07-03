@@ -14,11 +14,12 @@ class ContractsController < ApplicationController
 
   def create
     p params[:contract]
-    # ticker = Asset.get_by_ticker(params[:ticker], locals: {ticker => :ticker})
     @contract = Contract.new(contract_params)
     if @contract.save
-      Asset.get(@contract.ticker, @contract.created_at.change(:sec => 0).strftime("%Y-%M-%d %H:%M:%S"))
-      redirect_to user_path(current_user, locals => {@price => @price})
+      adjusted_time = @contract.created_at - 4.hours
+      price = Asset.get(@contract.ticker, adjusted_time.change(:sec => 0).strftime("%Y-%m-%d %H:%M:%S"))
+      p price
+      redirect_to user_path(current_user, :locals => {:price => price})
     else
       flash[:notice] = "Form is invalid"
       render 'new'
