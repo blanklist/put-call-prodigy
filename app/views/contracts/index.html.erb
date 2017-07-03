@@ -9,23 +9,32 @@
 </p>
 
 
-
-
-
-<ul class="tabs">
-  <li><a href='#overview1' id='overview'>Overview</a></li>
-  <li><a href='#fundamentals1' id='fundamentals'>Fundamentals</a></li>
-  <li><a href='#trade1' id='trade'>Trade</a></li>
-</ul>
+<div class='stockbox'>
+  <div class='button'><a href='#'>TSLA</a></div>
+  <div class='button'><a href='#'>GOOGL</a></div>
+  <div class='button'><a href='#'>AAPL</a></div>
+  <div class='button'><a href='#'>FB</a></div>
+  <div class='button'><a href='#'>TWTR</a></div>
 </div>
-<div class='items'>
-<div id="overview1" class='tab'>
-  <p>here is overview non-partial</p>
-  <%= render partial: "overview" %>
-</div>
-<div id="fundamentals1" class='tab'>
-  <%= render partial: "fundamentals" %>
-</div>
-<div id="trade1" class='tab'>
-  <%= render partial: "trade" %>
+
+<p></p>
+<p></p>
+
+<div class='infobox'>
+  <ul class="tabs">
+    <li><a href='#overview'>Overview</a></li>
+    <li><a href='#fundamentals'>Fundamentals</a></li>
+    <li><a href='#trade'>Trade</a></li>
+  </ul>
+  <div class='items'>
+    <div id="overview1" class='tab'>
+      <%= render partial: "overview" %>
+    </div>
+    <div id="fundamentals1" class='tab'>
+      <%= render partial: "fundamentals" %>
+    </div>
+    <div id="trade1" class='tab'>
+      <%= render partial: "trade" %>
+    </div>
+  </div>
 </div>

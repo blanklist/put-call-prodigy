@@ -14,16 +14,6 @@
  *= require_self
  */
 
- /*.inlineList li {
-    display: inline-block;
-    padding-left: 20px;
-    font-family: helvetica;
-    min-width: 33%;
-}
-
-.inlineList ul {
-  width: 40%;
-}*/
 
 body{
   font-family: helvetica;
@@ -65,107 +55,40 @@ body{
    color:  black;
  }
 
-
-
- /*@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
-@import url('https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css');
-s
-*, *:before, *:after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
-}
-
-body {
-  font: 14px/1 'Open Sans', sans-serif;
-  color: #555;
-  background: #eee;
-}
-
-h1 {
-  padding: 50px 0;
-  font-weight: 400;
-  text-align: center;
-}
-
-p {
-  margin: 0 0 20px;
-  line-height: 1.5;
-}
-
-main {
-  min-width: 320px;
-  max-width: 800px;
-  padding: 50px;
-  margin: 0 auto;
-  background: #fff;
-}
-
-section {
-  display: none;
-  padding: 20px 0 0;
-  border-top: 1px solid #ddd;
-}
-
-input {
-  display: none;
-}
-
-label {
+.infobox{
   display: inline-block;
-  margin: 0 0 -1px;
-  padding: 15px 25px;
-  font-weight: 600;
+  max-width: 400px;
+}
+
+.stockbox{
+  display: block; /* Make the buttons appear below each other */
+  max-width: 80px;
+  background-color: #Blue;
+  border: 1px solid #d3d3d3;
+  color: #d3d3d3; /* White text */
+  padding: 10px 24px; /* Some padding */
+  margin: 10px 10px 10px 10px;
+  cursor: pointer; /* Pointer/hand icon */
+  /*width: 50%; /* Set a width if needed */
+}
+
+
+.stockbox div:hover{
+  background: #bbb;
+}
+
+.button a{
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+
+.button{
+  color: black;
+  padding: 6px 6px 6px 6px;
+  margin: 5px 5px 5px 5px;
+  border: 1px solid black;
   text-align: center;
-  color: #bbb;
-  border: 1px solid transparent;
-}
-
-label:before {
-  font-family: helvetica;
-  font-weight: normal;
-  margin-right: 10px;
-}
-
-label[for*='overview']:before { content: '\f1cb'; }
-label[for*='fundamentals']:before { content: '\f17d'; }
-label[for*='trade']:before { content: '\f16b'; }
-/*label[for*='4']:before { content: '\f1a9'; }*/
-
-/*label:hover {
-  color: #888;
+  text-decoration: none;
   cursor: pointer;
 }
-
-input:checked + label {
-  color: #555;
-  border: 1px solid #ddd;
-  border-top: 2px solid orange;
-  border-bottom: 1px solid #fff;
-}
-
-#overview:checked ~ #overview,
-#fundamentals:checked ~ #fundamentals,
-#trade:checked ~ #trade {
-  display: block;
-}
-
-@media screen and (max-width: 650px) {
-  label {
-    font-size: 0;
-  }
-  label:before {
-    margin: 0;
-    font-size: 18px;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  label {
-    padding: 15px;
-  }
-/*}

@@ -1,16 +1,27 @@
 
 $( document ).on('turbolinks:load', function() {
   $('.tab').hide();
+  infoBox();
   stockBox();
+
 });
 
-var stockBox = function(){
+var infoBox = function(){
   $('.tabs').find('a').on('click', function(e){
   e.preventDefault();
   $('.tabs').find('.current').removeClass('.current');
   $(this).addClass('current');
-  console.log('*** fuck yeah ***');
-  console.log(this.hash);
   $(this.hash).show().siblings().hide();
 })
 };
+
+
+var stockBox = function(){
+  $('.stockbox').find('a').on('click', function(e){
+  e.preventDefault();
+  $link = $(this).text()
+  console.log('* * * * * * * * *')
+  console.log($link)
+
+})
+}
