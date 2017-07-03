@@ -20,12 +20,9 @@ class UsersController < ApplicationController
   end
 
   def show
-    p params
     @user = User.find(params[:id])
     @contracts = @user.contracts
-    p params[:locals][:price]
-    @price = params[:locals][:price]
-    p @price
+    @price = params[:price]
   end
 
   def edit
