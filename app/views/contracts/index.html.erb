@@ -7,3 +7,25 @@
 <p>
 <%= link_to 'Buy a contract', new_contract_path(@contracts) %>
 </p>
+
+
+
+
+
+<ul class="tabs">
+  <li><a href='#overview1' id='overview'>Overview</a></li>
+  <li><a href='#fundamentals1' id='fundamentals'>Fundamentals</a></li>
+  <li><a href='#trade1' id='trade'>Trade</a></li>
+</ul>
+</div>
+<div class='items'>
+<div id="overview1" class='tab'>
+  <p>here is overview non-partial</p>
+  <%= render partial: "overview" %>
+</div>
+<div id="fundamentals1" class='tab'>
+  <%= render partial: "fundamentals" %>
+</div>
+<div id="trade1" class='tab'>
+  <%= render partial: "trade" %>
+</div>
