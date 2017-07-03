@@ -1,6 +1,7 @@
 class ContractsController < ApplicationController
   def index
     if logged_in?
+      @user = current_user
       @contracts = current_user.contracts
     else
       redirect_to new_user_path
@@ -17,7 +18,7 @@ class ContractsController < ApplicationController
       adjusted_time = @contract.created_at - 4.hours
       formatted_time = adjusted_time.change(:sec => 0).strftime("%Y-%m-%d %H:%M:%S")
       price = Asset.get_price(@contract.ticker, formatted_time)
-      redirect_to user_path(current_user, :price => price)
+      redirect_to contract_path(contract, :price => price)
     else
       flash[:notice] = "Form is invalid"
       render 'new'
@@ -25,7 +26,8 @@ class ContractsController < ApplicationController
   end
 
   def show
-    @contracts = current_user.contracts
+    @contract = Contract.find(params[:id])
+    @price = params[:price]
   end
 
   private

@@ -4,6 +4,19 @@
   <%= link_to 'User Show Page', user_path(current_user) %>
 </p>
 
+<% @contracts.each do |contract| %>
+  <tr>
+    <td><%= link_to contract.ticker, contract_path(contract, :price => price) %></td>
+  </tr><br>
+  <tr>
+    <% if contract.strike_price %>
+      <td>Strike Price: $<%= contract.strike_price %></td><br>
+      <td>Created at: <%= contract.created_at.time %></td><br>
+      <td>Expiration time of <%= contract.expiration %></td><br>
+    <% end %>
+  </tr><br>
+<% end %>
+
 <p>
-<%= link_to 'Buy a contract', new_contract_path(@contracts) %>
+  <%= link_to 'Buy a contract', new_contract_path(@contracts) %>
 </p>

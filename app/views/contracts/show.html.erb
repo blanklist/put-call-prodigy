@@ -1,2 +1,17 @@
 <h1>Contracts Show Page</h1>
 
+
+<tr>
+  <td><%= @contract.ticker %></td>
+</tr><br>
+<tr>
+  <% if @contract.strike_price %>
+    <td>Strike Price: </td>
+    <td>$<%= @contract.strike_price %></td>
+    <td> on <%= @contract.created_at.time %></td>
+    <td> with an expiration time of <%= @contract.expiration %></td>
+</tr>
+  <% end %>
+<tr>
+  <td>Price at time of purchase: <%= @price %></td>
+</tr>
