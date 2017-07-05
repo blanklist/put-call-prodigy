@@ -7,34 +7,3 @@
 <p>
 <%= link_to 'Buy a contract', new_contract_path(@contracts) %>
 </p>
-
-
-<div class='stockbox'>
-  <div class='button'><a href='#'>TSLA</a></div>
-  <div class='button'><a href='#'>GOOGL</a></div>
-  <div class='button'><a href='#'>AAPL</a></div>
-  <div class='button'><a href='#'>FB</a></div>
-  <div class='button'><a href='#'>TWTR</a></div>
-</div>
-
-<p></p>
-<p></p>
-
-<div class='infobox'>
-  <ul class="tabs">
-    <li><a href='#overview'>Overview</a></li>
-    <li><a href='#fundamentals'>Fundamentals</a></li>
-    <li><a href='#trade'>Trade</a></li>
-  </ul>
-  <div class='items'>
-    <div id="overview" class='tab'>
-      <%= render partial: "overview" %>
-    </div>
-    <div id="fundamentals" class='tab'>
-      <%= render partial: "fundamentals" %>
-    </div>
-    <div id="trade" class='tab'>
-      <%= render partial: "trade" %>
-    </div>
-  </div>
-</div>

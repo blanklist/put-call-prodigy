@@ -22,6 +22,19 @@ var stockBox = function(){
   $link = $(this).text()
   console.log('* * * * * * * * *')
   console.log($link)
+  $.ajax({
+			url: url,
+			type: method,
+		})
+		.done(function(response) {
+			console.log(response);
+			$('.list').append(response);
+			$form.hide();
+			console.log("success");
+		})
+		.fail(function() {
+			console.log("error");
+		})
 
 })
 }
