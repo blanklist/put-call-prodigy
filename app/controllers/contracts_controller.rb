@@ -1,4 +1,6 @@
 class ContractsController < ApplicationController
+  include ContractsHelper
+
   def index
     if logged_in?
       @user = current_user
@@ -15,10 +17,12 @@ class ContractsController < ApplicationController
   def create
     @contract = Contract.new(contract_params)
     if @contract.save
-      adjusted_time = @contract.created_at - 4.hours
-      formatted_time = adjusted_time.change(:sec => 0).strftime("%Y-%m-%d %H:%M:%S")
-      price = Asset.get_price(@contract.ticker, formatted_time)
-      @contract.update_attributes(:spot_price => price)
+      # adjusted_time = @contract.created_at - 4.hours
+      # formatted_time = adjusted_time.change(:sec => 0).strftime("%Y-%m-%d %H:%M:%S")
+  
+      purchase_time = purchase_time_adjustment(@contract.created_at)
+      spot_price = Asset.get_price(@contract.ticker, purchase_time)
+      @contract.update_attributes(:spot_price => spot_price)
       redirect_to contract_path(@contract)
     else
       flash[:notice] = "Form is invalid"
