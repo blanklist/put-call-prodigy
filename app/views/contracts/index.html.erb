@@ -4,6 +4,8 @@
   <%= link_to 'User Show Page', user_path(current_user) %>
 </p>
 
+<h3><%= @current_time %></h3>
+
 <% @contracts.each do |contract| %>
   <tr>
     <td><%= link_to contract.ticker, contract_path(contract) %></td>
@@ -15,7 +17,10 @@
       <td>Expiration: <%= contract.expiration.in_time_zone("Pacific Time (US & Canada)") %></td><br>
       <td>Spot Price: $<%= contract.spot_price %></td><br>
     <% end %>
-    <% if contract.gain_loss %>
+    <% if contract.gain_loss == nil %>
+      <% contract.calculate_gain_loss %>
+        <td><%= contract.gain_loss %></td><br>
+    <% else %>
       <td><%= contract.gain_loss %></td><br>
     <% end %>
   </tr><br>

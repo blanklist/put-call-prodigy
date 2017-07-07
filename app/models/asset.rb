@@ -7,9 +7,6 @@ class Asset < ApplicationRecord
   end
 
   def self.get_price(ticker, time)
-    p ticker
-    p time
-
     response = Asset.get_by_ticker(ticker)
     price = response["Time Series (1min)"][time]["4. close"]
   end
