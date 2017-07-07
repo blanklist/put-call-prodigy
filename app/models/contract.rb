@@ -11,7 +11,7 @@ class Contract < ApplicationRecord
   	if Time.now > expiration && self.gain_loss == nil
   		sold_time = alpha_time_adjustment(expiration)
       sold_price = Asset.get_price(ticker, sold_time)
-  		gain_loss = sold_price.to_i - spot_price.to_i
+  		gain_loss = sold_price.to_f - spot_price.to_f
       self.update_attributes(:gain_loss => gain_loss)
     end
   end
