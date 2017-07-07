@@ -1,7 +1,6 @@
 require 'httparty'
 
-class AlphaAdapter < Asset
-  include HTTParty
+module AlphaAdapter
 
   def self.search(ticker)
     api_key = ALPHA_API
