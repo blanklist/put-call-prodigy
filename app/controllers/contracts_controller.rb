@@ -17,8 +17,8 @@ class ContractsController < ApplicationController
   def create
     @contract = Contract.new(contract_params)
     if @contract.save
-      purchase_time = purchase_time_adjustment(@contract.created_at)
-      spot_price = Asset.get_spot_price(@contract.ticker, purchase_time)
+      purchase_time = alpha_time_adjustment(@contract.created_at)
+      spot_price = Asset.get_price(@contract.ticker, purchase_time)
       @contract.update_attributes(:spot_price => spot_price)
       redirect_to contract_path(@contract)
     else
@@ -29,6 +29,7 @@ class ContractsController < ApplicationController
 
   def show
     @contract = Contract.find(params[:id])
+    @current_time = Time.now.in_time_zone("Pacific Time (US & Canada)").to_s.split(" ").second
   end
 
   private

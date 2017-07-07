@@ -6,10 +6,13 @@ class Asset < ApplicationRecord
     AlphaAdapter.search(ticker)
   end
 
-  def self.get_spot_price(ticker, time)
+  def self.get_price(ticker, time)
+    p ticker
+    p time
+
     response = Asset.get_by_ticker(ticker)
-    spot_price = response["Time Series (1min)"][time]["4. close"]
-  end  
+    price = response["Time Series (1min)"][time]["4. close"]
+  end
 
 end
 
