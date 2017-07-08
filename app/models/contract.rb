@@ -15,4 +15,5 @@ class Contract < ApplicationRecord
       self.update_attributes(:gain_loss => gain_loss)
     end
   end
+  
 end

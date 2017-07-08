@@ -6,6 +6,8 @@
 
 <h3><%= @current_time %></h3>
 
+<h4><%= link_to 'Trade Forex Markets', assets_path %></h4>
+
 <% @contracts.each do |contract| %>
   <tr>
     <td><%= link_to contract.ticker, contract_path(contract) %></td>
@@ -25,10 +27,7 @@
     <% end %>
   </tr><br>
 
-
 <% end %>
-
-
 
 <p>
   <%= link_to 'Buy a contract', new_contract_path(@contracts) %>
