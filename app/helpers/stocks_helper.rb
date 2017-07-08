@@ -8,7 +8,7 @@ module StocksHelper
     {
       library: {
         title: {
-          text: "AAPL", 
+          text: "AAPL",
           x: -20
         },
         subtitle: {
@@ -23,6 +23,12 @@ module StocksHelper
                   title: {
                     text: 'Price Per Share'
                   }
+        },
+        xAxis: {
+                type: 'datetime',
+                dateTimeLabelFormats: {
+                    day: '%d %B'
+                }
         },
         chart: {
                   zoomType: 'xy',

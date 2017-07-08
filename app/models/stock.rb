@@ -36,8 +36,7 @@ class Stock
     end
   end
 
-  def get_ten_values
-    #@graph_values.first(10).to_h
-    @graph_values
+  def get_week_values
+    @graph_values.select { |date, _| date > 1.week.ago && date < Time.current }
   end
 end
