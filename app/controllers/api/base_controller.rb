@@ -3,10 +3,6 @@ class Api::BaseController < ApplicationController
 
   private
   def load_data
-    stock_data = Stock.new("AAPL", "15min")
-    puts '*' * 100
-    stock_data.generate
-    stock_data.extract_graph_data
-    p @stock_data = stock_data.get_week_values
+    @graph_data = GraphData.new.graph_stock(params[:ticker], "15min")
   end
 end

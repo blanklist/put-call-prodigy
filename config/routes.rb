@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   namespace :api do
     resources :graphs, only: [:create] do
       collection do
-        get 'time_interval'
+        get 'graph_data'
       end
     end
   end

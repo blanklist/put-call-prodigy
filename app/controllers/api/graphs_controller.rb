@@ -5,7 +5,7 @@ class Api::GraphsController < Api::BaseController
     end
   end
 
-  def time_interval
-    render json: [{name: 'AAPL', data: @stock_data}].chart_json
+  def graph_data
+    render json: [{name: 'AAPL', data: @graph_data}].chart_json
   end
 end

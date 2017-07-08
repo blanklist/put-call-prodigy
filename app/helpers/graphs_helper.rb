@@ -1,14 +1,14 @@
 module GraphsHelper
-  def get_graph
-    line_chart time_interval_api_graphs_path, basic_opts
+  def get_graph(ticker)
+    line_chart graph_data_api_graphs_path(ticker: ticker), customize(ticker)
   end
 
   private
-  def basic_opts
+  def customize(ticker)
     {
       library: {
         title: {
-          text: "AAPL",
+          text: ticker,
           x: -20
         },
         subtitle: {
