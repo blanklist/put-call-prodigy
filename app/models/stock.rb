@@ -35,4 +35,8 @@ class Stock
       @graph_values[k] = v["4. close"]
     end
   end
+
+  def get_ten_values
+    @graph_values.first(10).to_h
+  end
 end

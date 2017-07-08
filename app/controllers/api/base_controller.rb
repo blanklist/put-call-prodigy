@@ -7,6 +7,6 @@ class Api::BaseController < ApplicationController
     puts '*' * 100
     stock_data.generate
     stock_data.extract_graph_data
-    @stock_data = stock_data.graph_values
+    p @stock_data = stock_data.get_ten_values
   end
 end
