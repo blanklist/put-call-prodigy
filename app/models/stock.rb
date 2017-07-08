@@ -37,6 +37,7 @@ class Stock
   end
 
   def get_ten_values
-    @graph_values.first(10).to_h
+    #@graph_values.first(10).to_h
+    @graph_values
   end
 end

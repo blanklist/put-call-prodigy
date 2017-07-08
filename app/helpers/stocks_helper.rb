@@ -1,20 +1,34 @@
 module StocksHelper
-  def stat_by
+  def get_graph
     line_chart time_interval_api_stocks_path, basic_opts
-    #library: {chart: {backgroundColor: "#eee"}}
   end
 
   private
   def basic_opts
     {
       library: {
+        title: {
+          text: "AAPL", 
+          x: -20
+        },
+        subtitle: {
+          text: "as of #{l(Time.now, format: :us_date)}", x: -20
+        },
+        tooltip: {
+                    valueSuffix: 'click(s)'
+        },
         yAxis: {
-                  floor: 144, #must change to variable of upper_limit
-                  ceiling: 145, #must change to variable of lower_limit
-                },
-        chart: { backgroundColor: "#eee",
-                zoomType: 'xy'
-                }
+                  floor: 140, #must change to variable of upper_limit
+                  ceiling: 150, #must change to variable of lower_limit
+                  title: {
+                    text: 'Price Per Share'
+                  }
+        },
+        chart: {
+                  zoomType: 'xy',
+                  panning: true,
+                  panKey: 'shift'
+        }
       }
     }
   end
