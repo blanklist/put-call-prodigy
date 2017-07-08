@@ -13,7 +13,6 @@
 //= require rails-ujs
 //= require jquery
 //= require jquery_ujs
-//= require datepicker
 //= require highcharts
 //= require chartkick
 //= require turbolinks

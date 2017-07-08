@@ -19,3 +19,13 @@
 	<% end %>
 </p>
 <% end %>
+
+<div>
+	<%= form_tag api_stocks_path, remote: true do %>
+		<div class="col-sm-2">
+      <%= submit_tag 'Show!' %>
+    </div>
+  <% end %>
+</div>
+
+<%= render 'stocks/graph' %>

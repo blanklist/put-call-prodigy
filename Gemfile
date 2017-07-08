@@ -35,6 +35,7 @@ gem 'chartkick'
 gem 'groupdate'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
+gem 'httparty'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

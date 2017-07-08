@@ -3,6 +3,14 @@ Rails.application.routes.draw do
 
   resources :contracts, :users
 
+  namespace :api do
+    resources :stocks, only: [:create] do
+      collection do
+        get 'time_interval'
+      end
+    end
+  end
+
 #Need to add more "excepts" to sessions
 
   get "logout" => "sessions#destroy", :as => "logout"
