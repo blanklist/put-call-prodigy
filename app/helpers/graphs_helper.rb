@@ -1,6 +1,6 @@
-module StocksHelper
+module GraphsHelper
   def get_graph
-    line_chart time_interval_api_stocks_path, basic_opts
+    line_chart time_interval_api_graphs_path, basic_opts
   end
 
   private

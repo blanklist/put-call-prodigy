@@ -21,11 +21,11 @@
 <% end %>
 
 <div>
-	<%= form_tag api_stocks_path, remote: true do %>
+	<%= form_tag api_graphs_path, remote: true do %>
 		<div class="col-sm-2">
       <%= submit_tag 'Show!' %>
     </div>
   <% end %>
 </div>
 
-<%= render 'stocks/graph' %>
+<%= render 'graphs/graph' %>

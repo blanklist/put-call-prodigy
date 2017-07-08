@@ -1,4 +1,4 @@
-class Api::StocksController < Api::BaseController
+class Api::GraphsController < Api::BaseController
   def create
     respond_to do |format|
       format.js
