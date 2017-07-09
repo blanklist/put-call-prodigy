@@ -22,8 +22,20 @@
 
 <div>
 	<%= form_tag api_graphs_path, remote: true do %>
+		<%= hidden_field_tag(:ticker, 'AAPL') %>
+
 		<div class="col-sm-2">
-      <%= submit_tag 'Show!' %>
+      <%= submit_tag 'AAPL' %>
+    </div>
+  <% end %>
+</div>
+
+<div>
+	<%= form_tag api_graphs_path, remote: true do %>
+		<%= hidden_field_tag(:ticker, 'AA') %>
+
+		<div class="col-sm-2">
+      <%= submit_tag 'AA' %>
     </div>
   <% end %>
 </div>

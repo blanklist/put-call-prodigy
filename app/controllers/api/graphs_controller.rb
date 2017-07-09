@@ -6,6 +6,6 @@ class Api::GraphsController < Api::BaseController
   end
 
   def graph_data
-    render json: [{name: 'AAPL', data: @graph_data}].chart_json
+    render json: [{name: @ticker, data: @graph_data}].chart_json
   end
 end

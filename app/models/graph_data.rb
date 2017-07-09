@@ -8,7 +8,7 @@ class GraphData
     stock = Stock.new(ticker, time_interval)
     @stock_raw = stock.generate
     extract_data
-    get_week_values
+    @graph_values
   end
 
   private

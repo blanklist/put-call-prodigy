@@ -1,11 +1,16 @@
 module GraphsHelper
   def get_graph(ticker)
+    ticker ||= 'AAPL'
     line_chart graph_data_api_graphs_path(ticker: ticker), customize(ticker)
   end
 
   private
   def customize(ticker)
     {
+      id: "stock-graph",
+      width: "500px",
+      height: "300px",
+      curve: false,
       library: {
         title: {
           text: ticker,
@@ -18,17 +23,18 @@ module GraphsHelper
                     valueSuffix: 'click(s)'
         },
         yAxis: {
-                  floor: 140, #must change to variable of upper_limit
-                  ceiling: 150, #must change to variable of lower_limit
+                  # floor: 30, #must change to variable of upper_limit
+                  # ceiling: 50, #must change to variable of lower_limit
                   title: {
                     text: 'Price Per Share'
                   }
         },
         xAxis: {
-                type: 'datetime',
+                crosshair: true,
                 dateTimeLabelFormats: {
                     day: '%d %B'
-                }
+                },
+                type: 'datetime'
         },
         chart: {
                   zoomType: 'xy',

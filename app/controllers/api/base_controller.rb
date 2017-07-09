@@ -3,6 +3,7 @@ class Api::BaseController < ApplicationController
 
   private
   def load_data
-    @graph_data = GraphData.new.graph_stock(params[:ticker], "15min")
+    @ticker = params[:ticker]
+    @graph_data = GraphData.new.graph_stock(@ticker, "Daily")
   end
 end
