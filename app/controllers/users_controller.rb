@@ -20,9 +20,8 @@ class UsersController < ApplicationController
   end
 
   def show
-   @user = User.find(params[:id])
-   @contracts = @user.contracts
-   
+    @user = User.find(params[:id])
+    @contracts = @user.contracts
   end
 
   def edit
