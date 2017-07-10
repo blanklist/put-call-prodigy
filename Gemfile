@@ -33,7 +33,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 gem 'table_for_collection'
 
-
+gem 'sidekiq'
 
 #API STURFF
 gem 'savon'

@@ -10,8 +10,6 @@
   <%= @user.username %>
 </p>
 
-
-
 <% @user.contracts.each do |contract| %>
   <tr>
     <td><%= contract.ticker %></td>
@@ -27,13 +25,6 @@
   </tr>
   <br>
 <% end %>
-
-<%= XigniteAdapter.marketcap('pbyi') %>
-
-
-
-
-
 
 <p>
 <%= link_to 'Buy a contract', new_contract_path(@contracts) %>
