@@ -38,6 +38,7 @@ gem 'jquery-rails'
 gem 'httparty'
 gem 'jquery-turbolinks'
 
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
