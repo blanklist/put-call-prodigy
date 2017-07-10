@@ -12,4 +12,10 @@
 //
 //= require rails-ujs
 //= require turbolinks
-//= require_tree .
+//= require_tree
+
+
+
+// $( document ).ready(function() {
+//     console.log( "ready!" );
+// });

@@ -14,7 +14,7 @@ class AssetsController < ApplicationController
 		@contract = Contract.new
     @current_time = Time.now.in_time_zone("Pacific Time (US & Canada)").to_s.split(" ").second
 		@asset = Asset.find(params[:id])
-		@most_recent_price = Asset.get_price(@asset.ticker, "2017-07-08 07:30:00")
+		@most_recent_price = Asset.get_price(@asset.ticker, @current_time)
 	end
 
 end

@@ -1,11 +1,16 @@
 <!DOCTYPE html>
+<%= stylesheet_link_tag 'application' %>
 <html>
   <head>
+    <link href="https://fonts.googleapis.com/css?family=Cabin|Raleway" rel="stylesheet">
     <title>PutCallProdigy</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
   <%= render template: "layouts/_header" %>
   <body>

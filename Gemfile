@@ -34,11 +34,16 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'table_for_collection'
 
 
+
 #API STURFF
+gem 'savon'
+# gem 'savon', '~> 2.11.0'
 gem 'httparty'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem "rb-fsevent"
+
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

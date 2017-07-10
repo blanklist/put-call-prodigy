@@ -10,6 +10,36 @@
   <%= @user.username %>
 </p>
 
+
+
+<% @user.contracts.each do |contract| %>
+  <tr>
+    <td><%= contract.ticker %></td>
+  </tr><br>
+  <tr>
+    <% if contract.strike_price %>
+      <td>Strike Price: </td>
+      <td>$<%= contract.strike_price %></td>
+      <td> on <%= contract.created_at.time %></td>
+      <td> with an expiration time of <%= contract.expiration %></td>
+  </tr>
+    <% end %>
+  </tr>
+  <br>
+<% end %>
+
+<%= XigniteAdapter.marketcap('pbyi') %>
+
+
+
+
+
+
+<p>
+<%= link_to 'Buy a contract', new_contract_path(@contracts) %>
+</p>
+
 <%= table_for @contracts do -%>
   <% columns :ticker, :strike_price, :spot_price, :interval, :gain_loss %>
 <% end %>
+

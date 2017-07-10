@@ -1,20 +1,13 @@
 <header>
-  <div id="navbar-container">
-    <div id="navbar-left-container">
-      <div id="header-banner-container"><span id="logo-p2">Put Call Prodigy</span></div>
-      <ul class="navbar-link-list">
-        <li class="navbar-list-item"><a href="/">Home</a></li>
-      </ul>
-    </div>
-    <div id="navbar-right-container">
-      <ul class="navbar-link-list">
+<%= stylesheet_link_tag 'application' %>
+  <div class="topnav" id="myTopnav">
         <% if current_user %>
-          <li class="navbar-list-item"><a href="/logout">Logout</a></li>
+          <a href="/">Home</a>
+          <a href="/logout">Logout</a>
         <% else %>
-          <li class="navbar-list-item"><a href="/login">Login</a></li>
-          <li class="navbar-list-item"><a href="/users/new">Register</a></li>
+          <a href="/">Home</a>
+          <a href="/login">Login</a>
+          <a href="/users/new">Register</a>
         <% end %>
-      </ul>
-    </div>
   </div>
 </header>
