@@ -15,9 +15,84 @@
  */
 
 
-body {
-  font-family: cabin;
+body{
+  font-family: helvetica;
 }
+
+.tabs{
+  list-style: none;
+  margin: 0;
+  padding 0;
+  background-color: #ddd'
+}
+
+.tabs li{
+  display: inline-block;
+ }
+
+ .tabs a{
+   border-radius: 3px 3px 0 0;
+   background: #d6d6d6;
+   color: #333;
+   display: block;
+   padding: 0.5em 1em;
+   text-decoration: none;
+ }
+
+ .tabs a.current{
+   color: black;
+   background: #c15d5d;
+ }
+
+ .tabs a:hover{
+   background: #bbd3db;
+ }
+
+ .tab{
+   background: white;
+   border: 5px solid GhostWhite;
+   padding: 1em;
+   color:  black;
+ }
+
+.infobox{
+  display: inline-block;
+  max-width: 400px;
+}
+
+.stockbox{
+  display: block; /* Make the buttons appear below each other */
+  max-width: 80px;
+  background-color: #Blue;
+  border: 1px solid #d3d3d3;
+  color: #d3d3d3; /* White text */
+  padding: 10px 24px; /* Some padding */
+  margin: 10px 10px 10px 10px;
+  cursor: pointer; /* Pointer/hand icon */
+  /*width: 50%; /* Set a width if needed */
+}
+
+
+.stockbox div:hover{
+  background: #bbb;
+}
+
+.button a{
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+
+.button{
+  color: black;
+  padding: 6px 6px 6px 6px;
+  margin: 5px 5px 5px 5px;
+  border: 1px solid black;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 
  .topnav {
      background-color: #333;
@@ -45,3 +120,4 @@ body {
      background-color: #4CAF50;
      color: white;
  }
+
