@@ -29,7 +29,35 @@
 
 <% end %>
 
-<p>
-  <%= link_to 'Buy a contract', new_contract_path(@contracts) %>
-</p>
+<div  class='main-image' ><%= image_tag("finviz2.png") %></div>
+
+<div class='console'>
+
+  <div class='stockbox'>
+    <div class='button'><%= link_to "TSLA", contracts_path(:ticker => 'tsla')%></div>
+    <div class='button'><%= link_to "GOOGL", contracts_path(:ticker => 'googl') %></div>
+    <div class='button'><%= link_to "AAPL", contracts_path(:ticker => 'aapl') %></div>
+    <div class='button'><%= link_to "FB", contracts_path(:ticker => 'fb') %></div>
+    <div class='button'><%= link_to "TWTR", contracts_path(:symbol => 'twtr') %></div>
+  </div>
+</div>
+
+<div class='infobox'>
+   <ul class="tabs">
+      <li><a href='#overview'>Overview</a></li>
+      <li><a href='#fundamentals'>Fundamentals</a></li>
+      <li><a href='#trade'>Trade</a></li>
+  </ul>
+  <div class='items'>
+    <div id="overview" class='tab'>
+      <%= render partial: "overview" %>
+    </div>
+    <div id="fundamentals" class='tab'>
+      <%= render partial: "fundamentals" %>
+    </div>
+    <div id="trade" class='tab'>
+      <%= render partial: "trade" %>
+    </div>
+  </div>
+</div>
 

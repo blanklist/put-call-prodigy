@@ -23,7 +23,7 @@ body{
   list-style: none;
   margin: 0;
   padding 0;
-  background-color: #ddd'
+  background-color: #ddd;
 }
 
 .tabs li{
@@ -56,7 +56,7 @@ body{
  }
 
 .infobox{
-  display: inline-block;
+  display: block;
   max-width: 400px;
 }
 
@@ -72,9 +72,20 @@ body{
   /*width: 50%; /* Set a width if needed */
 }
 
-
 .stockbox div:hover{
   background: #bbb;
+}
+
+.console{
+  max-width: 240px;
+  float: left;
+  display: inline-block;
+}
+
+.main-image{
+  float: left;
+  size: 360px;
+  display: inline-block;
 }
 
 .button a{
@@ -93,12 +104,10 @@ body{
   cursor: pointer;
 }
 
-
- .topnav {
+.topnav {
      background-color: #333;
      overflow: hidden;
  }
-
 
  .topnav a {
      float: left;

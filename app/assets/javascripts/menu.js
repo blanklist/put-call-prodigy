@@ -1,9 +1,7 @@
-
 $( document ).on('turbolinks:load', function() {
   $('.tab').hide();
   infoBox();
   stockBox();
-
 });
 
 var infoBox = function(){
@@ -18,7 +16,7 @@ var infoBox = function(){
 
 var stockBox = function(){
   $('.stockbox').find('a').on('click', function(e){
-  e.preventDefault();
+  // e.preventDefault();
   $link = $(this).text()
   console.log('* * * * * * * * *')
   console.log($link)
