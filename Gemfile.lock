@@ -73,11 +73,9 @@ GEM
     ffi (1.9.18)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
-    groupdate (3.2.0)
-      activesupport (>= 3)
     httparty (0.15.5)
       multi_xml (>= 0.5.2)
-    i18n (0.8.5)
+    i18n (0.8.6)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
@@ -195,7 +193,6 @@ DEPENDENCIES
   capybara (~> 2.13)
   chartkick
   coffee-rails (~> 4.2)
-  groupdate
   httparty
   jbuilder (~> 2.5)
   jquery-rails

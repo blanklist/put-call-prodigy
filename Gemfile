@@ -31,12 +31,11 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 
 # Chart gems
-gem 'chartkick'
-gem 'groupdate'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'httparty'
 gem 'jquery-turbolinks'
+gem 'chartkick'
 
 
 # Use Capistrano for deployment

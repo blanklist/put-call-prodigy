@@ -19,10 +19,6 @@ class GraphData
     end
   end
 
-  def get_week_values
-    @graph_values.select { |date, _| date > 1.week.ago && date < Time.current }
-  end
-
   def string_to_milliseconds(str)
     time_arr = str.scan(/\d+/).map(&:to_i)
     Time.new(time_arr[0], time_arr[1], time_arr[2]).to_i * 1000

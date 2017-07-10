@@ -31,7 +31,5 @@ $(document).on('turbolinks:load', function (e) {
       });
   }).fail(function(data) {
     console.error("Something went wrong", data);
-  }).always(function() {
-    // console.log("complete");
   });
 });
