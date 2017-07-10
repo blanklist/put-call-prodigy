@@ -1,9 +1,15 @@
-<h1>New Contract Page</h1>
+<h1>Assets Show Page</h1>
 
-<%= form_for @contract do |f| %>
+<h3><%= @current_time %></h3>
+
+<h3><%= @asset.ticker %></h3>
+
+<h4>Price: <%= @most_recent_price %></h4>
+
+<%= form_for @contract, url: {controller: "contracts", action: "create"} do |f| %>
   <p>
     <%= f.label :ticker %>
-    <%= f.text_field :ticker %>
+    <%= f.text_field :ticker, value: @asset.ticker %>
   </p>
   <p>
     <%= f.label :strike_price %>

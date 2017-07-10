@@ -4,6 +4,32 @@
   <%= link_to 'User Show Page', user_path(current_user) %>
 </p>
 
+<h3><%= @current_time %></h3>
+
+<h4><%= link_to 'Trade Forex Markets', assets_path %></h4>
+
+<% @contracts.each do |contract| %>
+  <tr>
+    <td><%= link_to contract.ticker, contract_path(contract) %></td>
+  </tr><br>
+  <tr>
+    <% if contract.strike_price %>
+      <td>Strike Price: $<%= contract.strike_price %></td><br>
+      <td>Created at: <%= contract.created_at.in_time_zone("Pacific Time (US & Canada)") %></td><br>
+      <td>Expiration: <%= contract.expiration.in_time_zone("Pacific Time (US & Canada)") %></td><br>
+      <td>Spot Price: $<%= contract.spot_price %></td><br>
+    <% end %>
+    <% if contract.gain_loss == nil %>
+      <% contract.calculate_gain_loss %>
+        <td><%= contract.gain_loss %></td><br>
+    <% else %>
+      <td><%= contract.gain_loss %></td><br>
+    <% end %>
+  </tr><br>
+
+<% end %>
+
 <p>
-<%= link_to 'Buy a contract', new_contract_path(@contracts) %>
+  <%= link_to 'Buy a contract', new_contract_path(@contracts) %>
 </p>
+
