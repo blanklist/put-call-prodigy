@@ -11,6 +11,6 @@ class Asset < ApplicationRecord
     price = response["Time Series (1min)"][time]["4. close"]
   end
 
+  def
+
 end
-
-
