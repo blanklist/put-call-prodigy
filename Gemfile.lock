@@ -63,6 +63,8 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
     docile (1.1.5)
+    domain_name (0.5.20170404)
+      unf (>= 0.0.5, < 1.0.0)
     dotenv (2.2.1)
     dotenv-rails (2.2.1)
       dotenv (= 2.2.1)
@@ -72,6 +74,8 @@ GEM
     ffi (1.9.18)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
+    http-cookie (1.0.3)
+      domain_name (~> 0.5)
     httparty (0.15.5)
       multi_xml (>= 0.5.2)
     i18n (0.8.4)
@@ -95,6 +99,7 @@ GEM
     minitest (5.10.2)
     multi_json (1.12.1)
     multi_xml (0.6.0)
+    netrc (0.11.0)
     nio4r (2.1.0)
     nokogiri (1.8.0)
       mini_portile2 (~> 2.2.0)
@@ -131,6 +136,10 @@ GEM
     rb-fsevent (0.10.2)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
+    rest-client (2.0.2)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 4.0)
+      netrc (~> 0.8)
     ruby_dep (1.5.0)
     rubyzip (1.2.1)
     sass (3.4.24)
@@ -160,6 +169,9 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    stock_quote (1.4.0)
+      json
+      rest-client (~> 2.0.2)
     table_for_collection (1.0.7)
       actionpack
     thor (0.19.4)
@@ -172,6 +184,9 @@ GEM
       thread_safe (~> 0.1)
     uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.4)
     web-console (3.5.1)
       actionview (>= 5.0)
       activemodel (>= 5.0)
@@ -204,6 +219,7 @@ DEPENDENCIES
   simplecov
   spring
   spring-watcher-listen (~> 2.0.0)
+  stock_quote
   table_for_collection
   turbolinks (~> 5)
   tzinfo-data
