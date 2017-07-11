@@ -5,6 +5,7 @@ class ContractsController < ApplicationController
     if logged_in?
       @user = current_user
       @contracts = current_user.contracts
+      # GetStockPriceJob.perform_later "TSLA"
     else
       redirect_to new_user_path
     end
@@ -20,7 +21,7 @@ class ContractsController < ApplicationController
       purchase_time = alpha_time_adjustment(@contract.created_at)
       spot_price = Asset.get_price(@contract.ticker, purchase_time)
       @contract.update_attributes(:spot_price => spot_price)
-      redirect_to contract_path(@contract)
+      redirect_to contracts_path(@contract)
     else
       flash[:notice] = "Form is invalid"
       render 'new'

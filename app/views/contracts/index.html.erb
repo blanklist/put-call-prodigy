@@ -20,7 +20,7 @@
       <td>Spot Price: $<%= contract.spot_price %></td><br>
     <% end %>
     <% if contract.gain_loss == nil %>
-      <% contract.calculate_gain_loss %>
+      <% CalculateGainLossJob.set(wait_until: contract.expiration).perform_later contract %>
         <td><%= contract.gain_loss %></td><br>
     <% else %>
       <td><%= contract.gain_loss %></td><br>
