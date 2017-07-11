@@ -1,4 +1,10 @@
 $(document).on('turbolinks:load', function (e) {
+  loadGraph(e);
+  
+
+});
+
+var loadGraph = function(e) {
   e.preventDefault();
 
   var url = "/api/graphs/graph_data";
@@ -32,4 +38,4 @@ $(document).on('turbolinks:load', function (e) {
   }).fail(function(data) {
     console.error("Something went wrong", data);
   });
-});
+}
