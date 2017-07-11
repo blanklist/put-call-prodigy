@@ -1,14 +1,19 @@
 class AssetsController < ApplicationController
 	include ContractsHelper
 
-
+	def create
+		@asset = Asset.new
+		### how are we going to use this? Won't be a form post.
+	end
 
 
 	def show
 		if logged_in?
       @user = current_user
       @contracts = current_user.contracts
-			## needs to be currentasset.contracts
+			@contract = Contract.new
+	    @current_time = Time.now.in_time_zone("Pacific Time (US & Canada)").to_s.split(" ").second
+			@asset = Asset.find_by(id: params[:id])
     else
       redirect_to new_user_path
     end
@@ -21,6 +26,7 @@ class AssetsController < ApplicationController
 
 
 	def delete
+		Asset.delete(:id)
 
 	end
 
