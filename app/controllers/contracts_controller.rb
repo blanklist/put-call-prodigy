@@ -18,7 +18,7 @@ class ContractsController < ApplicationController
       purchase_time = alpha_time_adjustment(@contract.created_at)
       spot_price = Asset.get_price(@contract.ticker, purchase_time)
       @contract.update_attributes(:spot_price => spot_price)
-      redirect_to contract_path(@contract)
+      redirect_to asset_path(@contract)
     else
       flash[:notice] = "Form is invalid"
       render 'new'
@@ -26,12 +26,13 @@ class ContractsController < ApplicationController
   end
 
   def show
-    @contract = Contract.find(params[:id])
+    # @contract = Contract.find(params[:id])
+    @contract.Contract.new
     @current_time = Time.now.in_time_zone("Pacific Time (US & Canada)").to_s.split(" ").second
   end
 
   private
-  ## Joe -- define spot price, redefine if necessary
+
   def contract_params
     params.require(:contract).permit(:ticker, :strike_price, :spot_price, :interval, :user_id)
     ## add expiration_date & status?

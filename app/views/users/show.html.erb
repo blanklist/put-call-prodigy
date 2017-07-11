@@ -36,10 +36,9 @@
 
 
 <p>
-<%= link_to 'Buy a contract', new_contract_path(@contracts) %>
+<%= link_to 'Buy a contract', new_asset_contract_path(@contracts) %>
 </p>
 
 <%= table_for @contracts do -%>
   <% columns :ticker, :strike_price, :spot_price, :interval, :gain_loss %>
 <% end %>
-

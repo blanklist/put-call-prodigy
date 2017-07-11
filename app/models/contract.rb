@@ -2,6 +2,7 @@ class Contract < ApplicationRecord
   include ContractsHelper
 
   belongs_to :user
+  belongs_to :asset
 
   def expiration
     created_at.time + interval.minutes
@@ -15,5 +16,5 @@ class Contract < ApplicationRecord
       self.update_attributes(:gain_loss => gain_loss)
     end
   end
-  
+
 end

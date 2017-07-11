@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :users
 
   resources :assets do
-    resources :contracts, only: [:create]
+    resources :contracts, only: [:create, :new]
   end
 
 #Need to add more "excepts" to sessions
