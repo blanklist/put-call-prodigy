@@ -4,55 +4,6 @@
       "/home/blanklist/devbootcamp/phase-3/put_call_prodigy/test/models/user_test.rb": [
         1,
         null,
-        1,
-        1,
-        0,
-        0,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/home/blanklist/devbootcamp/phase-3/put_call_prodigy/app/models/contract.rb": [
-        1,
-        1,
-        null,
-        1,
-        0,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null,
-        null
-      ],
-      "/home/blanklist/devbootcamp/phase-3/put_call_prodigy/app/models/application_record.rb": [
-        1,
-        1,
-        null
-      ],
-      "/home/blanklist/devbootcamp/phase-3/put_call_prodigy/app/models/user.rb": [
-        1,
-        1,
-        null,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        0,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
         null,
         null,
         null,
@@ -61,6 +12,6 @@
         null
       ]
     },
-    "timestamp": 1499010710
+    "timestamp": 1499300592
   }
 }

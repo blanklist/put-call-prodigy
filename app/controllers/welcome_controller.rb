@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
 	def index
-		redirect_to contracts_path
+		redirect_to assets_path
 	end
-end	
+end

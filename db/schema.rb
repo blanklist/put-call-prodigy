@@ -10,19 +10,42 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170630215008) do
+ActiveRecord::Schema.define(version: 20170708182901) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "contracts", force: :cascade do |t|
+  create_table "assets", force: :cascade do |t|
     t.string "ticker"
-    t.integer "strike_price"
-    t.integer "spot_price"
-    t.integer "interval"
-    t.bigint "user_id"
+    t.string "company_name"
+    t.text "description"
+    t.decimal "roc"
+    t.decimal "rsl"
+    t.decimal "mfl"
+    t.decimal "adx"
+    t.decimal "obv"
+    t.decimal "sma"
+    t.decimal "ema"
+    t.decimal "stoch_d"
+    t.decimal "stoch_k"
+    t.decimal "price_data"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "contracts", force: :cascade do |t|
+    t.string "ticker"
+    t.float "strike_price"
+    t.float "spot_price"
+    t.integer "interval"
+    t.float "gain_loss"
+    t.datetime "expiration_date"
+    t.integer "status"
+    t.bigint "user_id"
+    t.bigint "asset_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["asset_id"], name: "index_contracts_on_asset_id"
     t.index ["user_id"], name: "index_contracts_on_user_id"
   end
 

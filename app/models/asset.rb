@@ -1,3 +1,5 @@
+require 'alpha_adapter'
+
 class Asset < ApplicationRecord
 
   def self.get_by_ticker(ticker)
@@ -7,9 +9,7 @@ class Asset < ApplicationRecord
   def self.get_price(ticker, time)
     response = Asset.get_by_ticker(ticker)
     price = response["Time Series (1min)"][time]["4. close"]
-  end  
+  end
+
 
 end
-
-
-  

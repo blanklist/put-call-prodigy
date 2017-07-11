@@ -1,11 +1,15 @@
 class CreateContracts < ActiveRecord::Migration[5.1]
   def change
     create_table :contracts do |t|
-      t.string :ticker
-      t.integer :strike_price
-      t.integer :spot_price
+      t.string  :ticker
+      t.float   :strike_price
+      t.float   :spot_price
       t.integer :interval
-      t.references :user
+      t.float   :gain_loss
+      t.datetime      :expiration_date
+      t.integer       :status
+      t.references    :user
+      t.references    :asset
       t.timestamps
     end
   end

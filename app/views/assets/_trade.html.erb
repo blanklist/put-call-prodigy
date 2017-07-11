@@ -1,6 +1,5 @@
-<h1>New Contract Page</h1>
-
-<%= form_for @contract do |f| %>
+<h3>this is the trade partial</h3>
+<%= form_for @contract, :url => asset_contracts_path(asset_id: @asset.id), :method => "post" do |f| %>
   <p>
     <%= f.label :ticker %>
     <%= f.text_field :ticker %>
@@ -14,6 +13,7 @@
     <%= f.text_field :interval %>
   </p>
     <%= f.hidden_field :user_id, value: current_user.id %>
+    <%= f.hidden_field :asset_id, value: @asset.id %>
   <p>
     <%= f.submit %>
   </p>

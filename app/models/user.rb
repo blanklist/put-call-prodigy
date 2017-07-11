@@ -9,6 +9,7 @@ class User < ApplicationRecord
   validates_presence_of :username
   validates_uniqueness_of :username
 
+
   def logged_in?
     !!current_user
   end
@@ -21,5 +22,7 @@ class User < ApplicationRecord
       nil
     end
   end
+
+
 
 end
