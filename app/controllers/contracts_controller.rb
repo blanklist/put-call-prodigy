@@ -2,17 +2,15 @@ class ContractsController < ApplicationController
   include ContractsHelper
 
   def index
-    if logged_in?
-      @user = current_user
-      @contracts = current_user.contracts
-    else
-      redirect_to new_user_path
-    end
+    @contracts = current_user.contracts
+    #if not logged in, can they get here?
   end
+
 
   def new
     @contract = Contract.new
   end
+
 
   def create
     @contract = Contract.new(contract_params)
@@ -33,7 +31,9 @@ class ContractsController < ApplicationController
   end
 
   private
+  ## Joe -- define spot price, redefine if necessary
   def contract_params
     params.require(:contract).permit(:ticker, :strike_price, :spot_price, :interval, :user_id)
+    ## add expiration_date & status?
   end
 end
