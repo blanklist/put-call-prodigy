@@ -1,0 +1,26 @@
+// API URI: https://api.intrinio.com
+// GET: /news?identifier=AAPL
+// FULL URL: https://api.intrinio.com/news?identifier=AAPL
+
+{
+    "result_count": 250,
+    "page_size": 250,
+    "current_page": 1,
+    "total_pages": 14,
+    "api_call_credits": 1,
+    "data": [
+        {
+            "title": "[$$] How will Twitter's suitors reap its value?",
+            "publication_date": "2016-09-25 12:12:33 +0000",
+            "url": "http://www.ft.com/cms/s/8d81a6da-82e6-11e6-8897-2359a58ac7a5,s01=1.html?ftcamp=traffic/partner/feed_headline/us_yahoo/auddev",
+            "summary": "[at Financial Times] - Twitter may finally be running out of time. News at the end of last week that Google and cloud software company Salesforce have both held preliminary discussions about a possible acquisition have underlined ..."
+        },
+        {
+            "title": "If Apple built a car, here are the companies it would probably work with",
+            "publication_date": "2016-09-25 12:00:00 +0000",
+            "url": "http://finance.yahoo.com/news/apple-built-car-companies-probably-120000342.html",
+            "summary": "If Apple built a car, here are the companies it would probably work with"
+        },
+        ...
+    ]
+}

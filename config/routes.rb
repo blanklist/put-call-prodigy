@@ -3,6 +3,14 @@ Rails.application.routes.draw do
 
   resources :contracts, :assets, :users
 
+  namespace :api do
+    resources :graphs, only: [:create] do
+      collection do
+        get 'graph_data'
+      end
+    end
+  end
+
 #Need to add more "excepts" to sessions
 
   get "logout" => "sessions#destroy", :as => "logout"
