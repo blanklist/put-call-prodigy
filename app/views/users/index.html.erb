@@ -2,21 +2,7 @@
 
 <% @users.each do |user| %>
 <p>
-	<%= user.username %><br>
-	<% user.contracts.each do |contract| %>
-	<tr>
-		<td><%= contract.ticker %></td>
-	</tr><br>
-	<tr>
-		<% if contract.strike_price %>
-			<td>Strike Price: </td>
-			<td>$<%= contract.strike_price %></td>
-			<td> on <%= contract.created_at.time %></td>
-			<td> with an expiration time of <%= contract.created_at.time + 15*60 %></td>
-	</tr>
-		<% end %>
-	</tr>
-	<% end %>
+	<%= link_to user.username, user_path(user) %><br>
 </p>
 <% end %>
 

@@ -9,6 +9,10 @@ class User < ApplicationRecord
   validates_uniqueness_of :username
 
 
+  def logged_in?
+    !!current_user
+  end
+
   def self.verify_user(params)
     @user = User.find_by_email(params[:email])
     if @user && @user.authenticate(params[:password])
@@ -17,5 +21,7 @@ class User < ApplicationRecord
       nil
     end
   end
+
+
 
 end

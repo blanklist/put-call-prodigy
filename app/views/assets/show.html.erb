@@ -1,0 +1,26 @@
+<h1>Assets Show Page</h1>
+
+<h3><%= @current_time %></h3>
+
+<h3><%= @asset.ticker %></h3>
+
+<h4>Price: <%= @most_recent_price %></h4>
+
+<%= form_for @contract, url: {controller: "contracts", action: "create"} do |f| %>
+  <p>
+    <%= f.label :ticker %>
+    <%= f.text_field :ticker, value: @asset.ticker %>
+  </p>
+  <p>
+    <%= f.label :strike_price %>
+    <%= f.number_field :strike_price, class: :text_field, step: :any %>
+  </p>
+  <p>
+    <%= f.label :interval %>
+    <%= f.text_field :interval %>
+  </p>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

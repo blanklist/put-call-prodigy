@@ -1,0 +1,7 @@
+<h3>Assets Index Page</h3>
+
+<% @assets.each do |asset| %>
+
+	<%= link_to asset.ticker, asset_path(asset) %>
+
+<% end %>

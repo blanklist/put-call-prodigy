@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  resources :contracts, :users
+  resources :contracts, :assets, :users
 
   namespace :api do
     resources :graphs, only: [:create] do

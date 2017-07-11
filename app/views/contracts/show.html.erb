@@ -1,0 +1,19 @@
+<h1>Contracts Show Page</h1>
+
+<h3><%= @current_time %></h3>
+
+<tr>
+  <td><%= @contract.ticker %></td>
+</tr><br>
+<tr>
+  <% if @contract.strike_price %>
+    <td>Strike Price: $<%= @contract.strike_price %></td><br>
+    <td>Created at: <%= @contract.created_at.in_time_zone("Pacific Time (US & Canada)") %></td><br>
+    <td>Expiration: <%= @contract.expiration.in_time_zone("Pacific Time (US & Canada)") %></td><br>
+    <td>Spot Price: $<%= @contract.spot_price %></td><br>
+  <% end %>
+</tr><br>
+
+<p>
+	<%= link_to 'Return to Contracts Index', contracts_path %>
+</p>
