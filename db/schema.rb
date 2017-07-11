@@ -35,17 +35,12 @@ ActiveRecord::Schema.define(version: 20170708182901) do
 
   create_table "contracts", force: :cascade do |t|
     t.string "ticker"
-<<<<<<< HEAD
     t.float "strike_price"
     t.float "spot_price"
     t.integer "interval"
     t.float "gain_loss"
     t.datetime "expiration_date"
     t.integer "status"
-=======
-    t.integer "strike_price"
-    t.datetime "interval"
->>>>>>> 3b182f85f0d6020e579f727604d1ac41fb3668bf
     t.bigint "user_id"
     t.bigint "asset_id"
     t.datetime "created_at", null: false
