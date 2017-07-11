@@ -220,10 +220,7 @@ DEPENDENCIES
   capybara (~> 2.13)
   chartkick
   coffee-rails (~> 4.2)
-<<<<<<< HEAD
-=======
   dotenv-rails
->>>>>>> development
   httparty
   jbuilder (~> 2.5)
   jquery-rails
