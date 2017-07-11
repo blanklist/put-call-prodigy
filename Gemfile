@@ -33,9 +33,6 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 gem 'table_for_collection'
 
-
-
-<<<<<<< HEAD
 # Chart gems
 gem 'bootstrap-sass'
 gem 'jquery-rails'
@@ -43,13 +40,10 @@ gem 'httparty'
 gem 'jquery-turbolinks'
 gem 'chartkick'
 
-
-=======
 #API STURFF
 gem 'savon'
 # gem 'savon', '~> 2.11.0'
-gem 'httparty'
->>>>>>> development
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem "rb-fsevent"
