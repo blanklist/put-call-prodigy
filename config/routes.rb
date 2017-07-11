@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  resources :contracts, :assets, :users
+  resources :users
+
+  resources :assets do
+    resources :contracts
+  end
 
 #Need to add more "excepts" to sessions
 
