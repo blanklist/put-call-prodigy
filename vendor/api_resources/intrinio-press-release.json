@@ -1,0 +1,58 @@
+// API URI: https://api.intrinio.com
+// GET: /press_releases?identifier=AAPL
+// FULL URL: https://api.intrinio.com/press_releases?identifier=FB
+
+{
+  "result_count": 13,
+  "page_size": 100,
+  "current_page": 1,
+  "total_pages": 1,
+  "api_call_credits": 1,
+  "data": [
+    {
+      "press_release_id": 9056,
+      "ticker": "FB",
+      "figi_ticker": "FB:US",
+      "figi": "BBG000MM2P62",
+      "issuer_name": "Bronstein, Gewirtz & Grossman, LLC",
+      "title": "DEADLINE ALERT: Bronstein, Gewirtz & Grossman, LLC Reminds Investors of Class Action Against Facebook, Inc. (FB) and Lead Plaintiff Deadline: March 28, 2017",
+      "publication_date": "2017-03-22T07:10:00-0700",
+      "url": "https:\/\/s3.amazonaws.com\/intrinio-data\/NASDAQ\/press-releases\/201703221010NASDAQ__NDE______6695319_en.xml",
+      "summary": null
+    },
+    {
+      "press_release_id": 8876,
+      "ticker": "FB",
+      "figi_ticker": "FB:US",
+      "figi": "BBG000MM2P62",
+      "issuer_name": "The Law Offices of Vincent Wong",
+      "title": "FB SHAREHOLDER ALERT: The Law Offices of Vincent Wong Reminds Investors of Commencement of a Class Action Involving Facebook, Inc. and a Lead Plaintiff Deadline of March 28, 2017",
+      "publication_date": "2017-03-21T07:13:33-0700",
+      "url": "https:\/\/s3.amazonaws.com\/intrinio-data\/NASDAQ\/press-releases\/201703211013NASDAQ__NDE______6712647_en.xml",
+      "summary": null
+    },
+    ...
+  ]
+}
+Returns the most recent press releases by Nasdaq GlobeNewsire for a company.
+
+Endpoint
+
+https://api.intrinio.com/press_releases
+
+Parameters
+
+identifier (optional, returns all press releases) - the stock market ticker symbol associated with the company’s common stock. If the company is foreign, use the stock exchange code, followed by a colon, then the ticker. You may request up to 10 tickers at once by separating them with a comma: TICKER SYMBOL
+related (optional, returns all press releases) - filter whether the list returned includes all press releases where a company is the subject or only press releases issued by the company: all | false | true
+page_size (optional, default page size is 100) - an integer greater than 1 for specifying the number of results on each page.
+page_number (optional, default page number is 1) - an integer greater than or equal to 1 for specifying the page number for the return values.
+Return Values
+
+ticker - the stock market ticker symbol associated with the companies common stock securities
+figi_ticker - the OpenFIGI ticker symbol
+figi - the OpenFIGI identifier
+issuer_name - the name of the issuer of the press release
+title - the title of the press release
+publication_date - the date the press release was published
+url - the hyperlink to the press release
+summary - a brief summary of the press release

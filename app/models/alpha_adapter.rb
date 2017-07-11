@@ -60,6 +60,47 @@ module AlphaAdapter
     response = HTTParty.get(url)
     response.parsed_response
   end
+
+  def self.dynamic_search(ticker, time)
+    api_key = ALPHA_API
+    up_function = 'TIME_SERIES_INTRADAY'
+    up_ticker = ticker.upcase
+    interval = time
+    url = "http://www.alphavantage.co/query?function=#{up_function}&symbol=#{up_ticker}&interval=#{interval}min&apikey=#{api_key}"
+    response = HTTParty.get(url)
+    response.parsed_response
+  end
+
+######################################
+#JJ these are for you <3
+
+
+  def self.monthly(ticker)
+    api_key = ALPHA_API
+    up_function = 'TIME_SERIES_MONTHLY'
+    up_ticker = ticker.upcase
+    url = "http://www.alphavantage.co/query?function=#{up_function}&symbol=#{up_ticker}&apikey=#{api_key}"
+    response = HTTParty.get(url)
+    response.parsed_response
+  end
+
+  def self.weekly(ticker)
+    api_key = ALPHA_API
+    up_function = 'TIME_SERIES_WEEKLY'
+    up_ticker = ticker.upcase
+    url = "http://www.alphavantage.co/query?function=#{up_function}&symbol=#{up_ticker}&apikey=#{api_key}"
+    response = HTTParty.get(url)
+    response.parsed_response
+  end
+
+  def self.daily(ticker)
+    api_key = ALPHA_API
+    up_function = 'TIME_SERIES_DAILY'
+    up_ticker = ticker.upcase
+    url = "http://www.alphavantage.co/query?function=#{up_function}&symbol=#{up_ticker}&apikey=#{api_key}"
+    response = HTTParty.get(url)
+    response.parsed_response
+  end
 end
 
 
