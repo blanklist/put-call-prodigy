@@ -1,0 +1,1 @@
+GetClosePrice.schedule!

@@ -6,4 +6,4 @@ App.stock_info = App.cable.subscriptions.create "StockInfoChannel",
     # Called when the subscription has been terminated by the server
 
   received: (data) ->
-    # update history partial
+    # update history partial (build history partial)

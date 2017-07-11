@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   post "login" => "sessions#create"
 
   root 'welcome#index'
+
+  mount ActionCable.server => '/cable'  
 end

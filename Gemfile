@@ -34,6 +34,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'table_for_collection'
 
 gem 'sidekiq'
+gem 'sidekiq-scheduler'
 
 #API STURFF
 gem 'savon'

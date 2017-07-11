@@ -1,0 +1,10 @@
+:schedule:
+  stock_price_job:
+    cron: '0 * * * * *' # once a minute
+    class: StockPriceJob
+
+
+:schedule:
+  contract_close_price_worker:
+    cron: '0 * * * * *'
+    class: ContractClosePriceWorker

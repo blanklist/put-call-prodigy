@@ -5,6 +5,7 @@ class ContractsController < ApplicationController
     if logged_in?
       @user = current_user
       @contracts = current_user.contracts
+      ContractClosePriceWorker.perform_later
     else
       redirect_to new_user_path
     end

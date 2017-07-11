@@ -2,12 +2,15 @@ class StockPriceJob < ApplicationJob
   queue_as :default
 
   def perform
-    if Time.now > expiration && Contract.gain_loss == nil
-      
-      # call API for price
-      # update contract
+    # if Time.now > expiration && Contract.gain_loss == nil
 
-      ActionCable.server.broadcast("stock_info_channel")
-    end
+    #   # Contract.calculate_gain_loss logic
+
+    #   ActionCable.server.broadcast("stock_info_channel")
+    puts 'stockpricejob test'
   end
 end
+
+
+# when does 'perform' occur?
+# 
