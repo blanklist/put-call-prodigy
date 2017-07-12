@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   resources :users
 
-  resources :assets do
+  resources :equities do
     resources :contracts, only: [:create, :new]
   end
 

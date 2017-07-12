@@ -1,8 +1,8 @@
-class AssetsController < ApplicationController
+class EquitiesController < ApplicationController
 	include ContractsHelper
 
 	def create
-		@asset = Asset.new
+		# @asset = Asset.new
 		### how are we going to use this? Won't be a form post.
 	end
 
@@ -13,7 +13,8 @@ class AssetsController < ApplicationController
       @contracts = current_user.contracts
 			@contract = Contract.new
 	    @current_time = Time.now.in_time_zone("Pacific Time (US & Canada)").to_s.split(" ").second
-			@asset = Asset.find_by(id: params[:id])
+			@equity = Equity.find_by(id: params[:id])
+      p params
     else
       redirect_to new_user_path
     end
@@ -26,7 +27,7 @@ class AssetsController < ApplicationController
 
 
 	def delete
-		Asset.delete(:id)
+		Equity.delete(:id)
 
 	end
 

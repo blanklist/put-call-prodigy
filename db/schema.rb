@@ -15,7 +15,23 @@ ActiveRecord::Schema.define(version: 20170708182901) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "assets", force: :cascade do |t|
+  create_table "contracts", force: :cascade do |t|
+    t.string "ticker"
+    t.float "strike_price"
+    t.float "spot_price"
+    t.integer "interval"
+    t.float "gain_loss"
+    t.datetime "expiration_date"
+    t.integer "status"
+    t.bigint "user_id"
+    t.bigint "equity_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["equity_id"], name: "index_contracts_on_equity_id"
+    t.index ["user_id"], name: "index_contracts_on_user_id"
+  end
+
+  create_table "equities", force: :cascade do |t|
     t.string "ticker"
     t.string "company_name"
     t.text "description"
@@ -31,22 +47,6 @@ ActiveRecord::Schema.define(version: 20170708182901) do
     t.decimal "price_data"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "contracts", force: :cascade do |t|
-    t.string "ticker"
-    t.float "strike_price"
-    t.float "spot_price"
-    t.integer "interval"
-    t.float "gain_loss"
-    t.datetime "expiration_date"
-    t.integer "status"
-    t.bigint "user_id"
-    t.bigint "asset_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["asset_id"], name: "index_contracts_on_asset_id"
-    t.index ["user_id"], name: "index_contracts_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
