@@ -1,8 +1,8 @@
-.container {
+/*.container {
    display: -webkit-flex;
    display: flex;
    flex-wrap: wrap;
-}
+}*/
 
 .stockbox{
   display: block;
