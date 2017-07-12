@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
 	def index
-		redirect_to assets_path
+		redirect_to equity_path(1)
 	end
 end

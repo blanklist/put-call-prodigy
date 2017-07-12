@@ -8,20 +8,24 @@ class ContractsController < ApplicationController
 
 
   def new
+    p "within contracts new" + params
     @contract = Contract.new
+    # @asset = Asset.find(params[:id])
   end
 
 
   def create
+    p "made it to contract create"
     @contract = Contract.new(contract_params)
     if @contract.save
       purchase_time = alpha_time_adjustment(@contract.created_at)
-      spot_price = Asset.get_price(@contract.ticker, purchase_time)
+      spot_price = Equity.get_price(@contract.ticker) #, purchase_time)
+      @equity = Equity.find(params[:equity_id])
       @contract.update_attributes(:spot_price => spot_price)
-      redirect_to asset_path(@contract)
+      redirect_to equity_path(@equity)
     else
       flash[:notice] = "Form is invalid"
-      render 'new'
+      render 'show'
     end
   end
 
@@ -34,7 +38,7 @@ class ContractsController < ApplicationController
   private
 
   def contract_params
-    params.require(:contract).permit(:ticker, :strike_price, :spot_price, :interval, :user_id)
+    params.require(:contract).permit(:ticker, :strike_price, :spot_price, :interval, :user_id, :equity_id)
     ## add expiration_date & status?
   end
 end

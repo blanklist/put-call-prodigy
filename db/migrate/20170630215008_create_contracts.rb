@@ -9,7 +9,7 @@ class CreateContracts < ActiveRecord::Migration[5.1]
       t.datetime      :expiration_date
       t.integer       :status
       t.references    :user
-      t.references    :asset
+      t.references    :equity
       t.timestamps
     end
   end

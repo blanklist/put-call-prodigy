@@ -1,20 +1,20 @@
 <h3>this is the trade partial</h3>
-<%= form_for @contract, :url => asset_contracts_path(asset_id: @asset.id), :method => "post" do |f| %>
-  <p>
+<%= form_for [equity, contract], url: equity_contracts_path(equity, contract) do |f| %>
+  <!-- <p> -->
     <%= f.label :ticker %>
-    <%= f.text_field :ticker %>
-  </p>
-  <p>
+    <%= f.text_field :ticker, value: equity.ticker %>
+<!--   </p>
+  <p> -->
     <%= f.label :strike_price %>
     <%= f.number_field :strike_price, class: :text_field, step: :any %>
-  </p>
-  <p>
+<!--   </p>
+  <p> -->
     <%= f.label :interval %>
     <%= f.text_field :interval %>
-  </p>
+  <!-- </p> -->
     <%= f.hidden_field :user_id, value: current_user.id %>
-    <%= f.hidden_field :asset_id, value: @asset.id %>
-  <p>
+    <%= f.hidden_field :equity_id, value: equity.id %>
+<!--   <p> -->
     <%= f.submit %>
-  </p>
+  <!-- </p> -->
 <% end %>
