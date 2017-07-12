@@ -1,6 +1,7 @@
 $(document).on('turbolinks:load', function (e) {
-  loadGraph(e);
-
+  // setInterval(function(){ loadGraph(e); }, 3000);
+  // setInterval(function(){ loadGraph(e); }, 300000);
+  loadGraph(e)
 
 });
 

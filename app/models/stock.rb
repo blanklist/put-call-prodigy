@@ -12,6 +12,7 @@ class Stock
 
   def generate
     url = @time_interval == "Daily" ? construct_day_url : construct_intraday_url
+    # url = construct_intraday_url
     HTTParty.get(url).parsed_response["Time Series (#{@time_interval})"]
   end
 
