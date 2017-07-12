@@ -19,7 +19,7 @@ class ContractsController < ApplicationController
     @contract = Contract.new(contract_params)
     if @contract.save
       purchase_time = alpha_time_adjustment(@contract.created_at)
-      spot_price = Equity.get_price(@contract.ticker) #, purchase_time)
+      spot_price = Equity.get_price(@contract.ticker, purchase_time)
       @equity = Equity.find(params[:equity_id])
       @contract.update_attributes(:spot_price => spot_price)
       redirect_to equity_path(@equity)

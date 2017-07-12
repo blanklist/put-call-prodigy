@@ -10,10 +10,11 @@ class EquitiesController < ApplicationController
 	def show
 		if logged_in?
       @user = current_user
-      @contracts = current_user.contracts
+			@equity = Equity.find_by(id: params[:id])
+      @contracts = current_user.contracts.select{|contract| contract.ticker == @equity.ticker }
 			@contract = Contract.new
 	    @current_time = Time.now.in_time_zone("Pacific Time (US & Canada)").to_s.split(" ").second
-			@equity = Equity.find_by(id: params[:id])
+
       p params
     else
       redirect_to new_user_path

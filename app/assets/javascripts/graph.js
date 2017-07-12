@@ -1,9 +1,10 @@
 $(document).on('turbolinks:load', function (e) {
-  loadGraph(e);
+
   changeGraph(e);
+  // loadGraph();
 });
 
-var loadGraph = function(e) {
+var loadGraph = function() {
   $ticker = 'TSLA';
   console.log($ticker);
   var url = "/api/graphs/graph_data";
