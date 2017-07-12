@@ -6,7 +6,6 @@ class ContractsController < ApplicationController
     #if not logged in, can they get here?
   end
 
-
   def new
     @contract = Contract.new
   end

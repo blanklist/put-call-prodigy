@@ -1,20 +1,29 @@
 
-
+.session-container {
+  display: block;
+  position: relative;
+  margin-right: 10%;
+  margin-left: 8%;
+  max-width: 1200px;
+  align: center;
+}
 
 #login-door {
   display: inline-block;
   position: relative;
-  top: 35px;
-  left: 25%;
-  width: 25%;
-  max-width: 350px;
+  top: 75px;
+  left: 100px;
+
+  margin-left: 320px;
+  max-width: 360px;
+  min-width: 275px;
 }
 
 #login-form {
   display: inline-block;
   position: relative;
-  top: 80px;
-  left: 25%;
+  bottom: 220px;
+  left: 760px;
   width: 300px;
 }
 
@@ -30,6 +39,7 @@
   background-color: #F0F0F0;
   border: none;
   outline: none;
+  font-size: 16px;
 }
 
 .fancy-button {
@@ -40,5 +50,16 @@
   padding: 5px;
   font-size: 14px;
   width: 100px;
+}
 
+.fancy-button:hover {
+  background-color: #F0F0F0;
+}
+
+#register-link {
+
+  position: relative;
+  bottom: 200px;
+  left: 760px;
+  color: #E24D50;
 }
