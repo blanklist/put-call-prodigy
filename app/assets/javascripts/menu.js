@@ -1,7 +1,7 @@
 $( document ).on('turbolinks:load', function() {
   $('.tab').hide();
   infoBox();
-  stockBox();
+  // stockBox();
 });
 
 var infoBox = function(){

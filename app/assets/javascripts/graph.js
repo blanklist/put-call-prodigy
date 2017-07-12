@@ -5,11 +5,14 @@ $(document).on('turbolinks:load', function (e) {
 });
 
 var loadGraph = function(e) {
-  e.preventDefault();
+  $('.stockbox').find('a').on('click', function(e){
+    // e.preventDefault();
+    $ticker = $(this).text()
 
+    console.log($ticker);
   var url = "/api/graphs/graph_data";
   var method = "get";
-  var chart_data = { ticker: 'AAPL' };
+  var chart_data = { ticker: $ticker };
 
   $.ajax({
     url: url,
@@ -24,11 +27,11 @@ var loadGraph = function(e) {
           },
 
           title: {
-              text: 'AAPL Stock Price'
+              text: $ticker + ' Stock Price'
           },
 
           series: [{
-              name: 'AAPL',
+              name: $ticker,
               data: data[0].data,
               tooltip: {
                   valueDecimals: 2
@@ -38,4 +41,5 @@ var loadGraph = function(e) {
   }).fail(function(data) {
     console.error("Something went wrong", data);
   });
-}
+})
+};

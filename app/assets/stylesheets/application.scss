@@ -64,15 +64,14 @@ body{
 }
 
 .stockbox{
-  display: block; /* Make the buttons appear below each other */
-  max-width: 80px;
+  display: block;
+  max-width: 240px;
   background-color: #Blue;
   border: 1px solid #d3d3d3;
-  color: #d3d3d3; /* White text */
-  padding: 10px 24px; /* Some padding */
+  color: #d3d3d3;
+  padding: 10px 24px;
   margin: 10px 10px 10px 10px;
-  cursor: pointer; /* Pointer/hand icon */
-  /*width: 50%; /* Set a width if needed */
+  cursor: pointer;
 }
 
 .stockbox div:hover{
