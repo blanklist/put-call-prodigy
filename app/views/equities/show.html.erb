@@ -27,7 +27,7 @@
   </ul>
   <div class='items'>
     <div id="overview" class='tab'>
-      <%= render partial: "overview" %>
+      <%= render partial: "overview", locals: {@equity => @equity} %>
     </div>
     <div id="fundamentals" class='tab'>
       <%= render partial: "fundamentals" %>
