@@ -1,19 +1,19 @@
 <%= form_for [equity, contract], url: equity_contracts_path(equity, contract) do |f| %>
-  <!-- <p> -->
+  <p>
     <%= f.label :ticker %>
     <%= f.text_field :ticker, value: equity.ticker %>
-<!--   </p>
-  <p> -->
+  </p>
+  <p>
     <%= f.label :strike_price %>
     <%= f.number_field :strike_price, class: :text_field, step: :any %>
-<!--   </p>
-  <p> -->
+  </p>
+  <p>
     <%= f.label :interval %>
     <%= f.text_field :interval %>
-  <!-- </p> -->
+  </p>
     <%= f.hidden_field :user_id, value: current_user.id %>
     <%= f.hidden_field :equity_id, value: equity.id %>
-<!--   <p> -->
+  <p>
     <%= f.submit %>
-  <!-- </p> -->
+  </p>
 <% end %>

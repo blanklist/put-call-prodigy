@@ -1,7 +1,6 @@
 class EquitiesController < ApplicationController
 	include ContractsHelper
 
-
 	def show
 		if logged_in?
       @user = current_user
@@ -13,6 +12,5 @@ class EquitiesController < ApplicationController
       redirect_to new_user_path
     end
 	end
-
 
 end
