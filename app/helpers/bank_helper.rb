@@ -1,7 +1,7 @@
 module BankHelper
 
   def bankroll
-    bankroll = current_user.contracts.select{|contract| contract.bank == @equity.ticker }
+      bankroll = current_user.contracts.sum(:gain_loss)
   end
 
 end
