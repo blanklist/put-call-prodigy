@@ -1,4 +1,3 @@
-<h3>This is the history partial</h3>
 <% @contracts.each do |contract| %>
 Strike price of $<%= contract.strike_price %> on <%= contract.created_at.strftime('%c %Z') %> expiring <%= contract.expiration.strftime('%c %Z') %><br>
 <% end %>
