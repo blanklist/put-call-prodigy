@@ -8,6 +8,7 @@ class CreateContracts < ActiveRecord::Migration[5.1]
       t.float   :gain_loss
       t.datetime      :expiration_date
       t.integer       :status
+      t.string        :type
       t.references    :user
       t.references    :equity
       t.timestamps

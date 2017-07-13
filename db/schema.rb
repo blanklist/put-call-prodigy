@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20170708182901) do
     t.float "gain_loss"
     t.datetime "expiration_date"
     t.integer "status"
+    t.string "type"
     t.bigint "user_id"
     t.bigint "equity_id"
     t.datetime "created_at", null: false
