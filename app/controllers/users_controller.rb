@@ -16,11 +16,14 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      redirect_to @user
-      # flash[:notice] = "You signed up successfully"
+      p "*" * 100
+      p @user
       respond_to do |format|
         format.html
         format.js
+      redirect_to edit_user_robot_path(@user, @user.robot)
+      # flash[:notice] = "You signed up successfully"
+
       end
     else
       flash[:notice] = "Form is invalid"
