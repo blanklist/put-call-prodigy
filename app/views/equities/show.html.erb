@@ -1,0 +1,39 @@
+<p>
+  <%= link_to 'User Show Page', user_path(current_user) %>
+</p>
+
+<div class='console'>
+
+  <div  class='main-image' ><%= render 'graphs/graph' %></div>
+
+  <div class='stockbox'>
+    <div class='button'><%= link_to "TSLA", equity_path(1) %></div>
+    <div class='button'><%= link_to "GOOGL", equity_path(2)  %></div>
+    <div class='button'><%= link_to "AAPL", equity_path(3) %></div>
+    <div class='button'><%= link_to "FB", equity_path(4) %></div>
+    <div class='button'><%= link_to "TWTR", equity_path(5) %></div>
+  </div>
+</div>
+
+<div class='infobox'>
+   <ul class="tabs">
+      <li><a href='#overview'>Overview</a></li>
+      <li><a href='#fundamentals'>Fundamentals</a></li>
+      <li><a href='#trade'>Trade</a></li>
+      <li><a href='#history'>History</a></li>
+  </ul>
+  <div class='items'>
+    <div id="overview" class='tab'>
+      <%= render partial: "overview", locals: {@equity => @equity} %>
+    </div>
+    <div id="fundamentals" class='tab'>
+      <%= render partial: "fundamentals" %>
+    </div>
+    <div id="trade" class='tab'>
+      <%= render partial: "trade", locals: {equity: @equity, contract: @contract} %>
+    </div>
+    <div id="history" class='tab'>
+      <%= render partial: "history", locals: {equity: @equity, contract: @contract} %>
+    </div>
+  </div>
+</div>

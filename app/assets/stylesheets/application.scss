@@ -69,38 +69,37 @@ body{
    color:  black;
  }
 
-.infobox{
-  display: block;
-  max-width: 400px;
-}
+// .infobox{
+//   display: block;
+//   max-width: 400px;
+// }
 
-.stockbox{
-  display: block; /* Make the buttons appear below each other */
-  max-width: 80px;
-  background-color: #Blue;
-  border: 1px solid #d3d3d3;
-  color: #d3d3d3; /* White text */
-  padding: 10px 24px; /* Some padding */
-  margin: 10px 10px 10px 10px;
-  cursor: pointer; /* Pointer/hand icon */
-  /*width: 50%; /* Set a width if needed */
-}
-
-.stockbox div:hover{
-  background: #bbb;
-}
+// .stockbox{
+//   display: block;
+//   max-width: 240px;
+//   background-color: #Blue;
+//   border: 1px solid #d3d3d3;
+//   color: #d3d3d3;
+//   padding: 10px 24px;
+//   margin: 10px 10px 10px 10px;
+//   cursor: pointer;
+// }
+//
+// .stockbox div:hover{
+//   background: #bbb;
+// }
 
 .console{
-  max-width: 240px;
+
   float: left;
-  display: inline-block;
+  display: block;
 }
 
-.main-image{
-  float: left;
-  size: 360px;
-  display: inline-block;
-}
+// .main-image{
+//   float: left;
+//   size: 640px;
+//   display: inline-block;
+// }
 
 .button a{
   display: block;

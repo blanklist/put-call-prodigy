@@ -6,6 +6,7 @@
 
 <h3><%= @current_time %></h3>
 
+
 <h4><%= link_to 'Trade Forex Markets', assets_path %></h4>
 
 <% @contracts.each do |contract| %>
@@ -20,7 +21,7 @@
       <td>Spot Price: $<%= contract.spot_price %></td><br>
     <% end %>
     <% if contract.gain_loss == nil %>
-      <% contract.calculate_gain_loss %>
+      <% CalculateGainLossJob.set(wait_until: contract.expiration).perform_later contract %>
         <td><%= contract.gain_loss %></td><br>
     <% else %>
       <td><%= contract.gain_loss %></td><br>
@@ -29,7 +30,7 @@
 
 <% end %>
 
-<div  class='main-image' ><%= image_tag("finviz2.png") %></div>
+<div  class='main-image' ><%= render 'graphs/graph' %></div>
 
 <div class='console'>
 
@@ -60,4 +61,3 @@
     </div>
   </div>
 </div>
-
