@@ -41,11 +41,6 @@ class ContractsController < ApplicationController
   private
 
   def contract_params
-<<<<<<< HEAD
-    params.require(:contract).permit(:ticker, :strike_price, :spot_price, :interval, :user_id, :equity_id)
-    ## add status?
-=======
     params.require(:contract).permit(:ticker, :strike_price, :spot_price, :interval, :gain_loss, :expiration_date, :status, :put_call, :user_id, :equity_id)
->>>>>>> f78cc544c92d086f9895a84d74ee54ae36712da9
   end
 end

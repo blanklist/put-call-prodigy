@@ -2,6 +2,11 @@
   <%= link_to 'User Show Page', user_path(current_user) %>
 </p>
 
+
+<div class='bankroll'>
+  <div>Bank:<br><%= @bankroll.to_i %></div>
+</div>
+
 <div class='console'>
 
   <div  class='main-image' ><%= render 'graphs/graph' %></div>
@@ -15,9 +20,6 @@
   </div>
 </div>
 
-<div class='bankroll'>
-  <div>Bank:<br><%= @bankroll %></div>
-</div>
 
 <div class='infobox'>
    <ul class="tabs">
