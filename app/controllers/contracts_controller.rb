@@ -29,7 +29,6 @@ class ContractsController < ApplicationController
       @contract.update_attributes(:spot_price => spot_price)
       CalculateGainLossJob.set(wait_until: @contract.expiration).perform_later @contract
       redirect_to equity_path(@equity)
-
     else
       flash[:notice] = "Form is invalid"
       render 'show'
