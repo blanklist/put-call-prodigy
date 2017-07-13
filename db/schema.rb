@@ -19,11 +19,12 @@ ActiveRecord::Schema.define(version: 20170708182901) do
     t.string "ticker"
     t.float "strike_price"
     t.float "spot_price"
+    t.float "sold_price"
     t.integer "interval"
     t.float "gain_loss"
     t.datetime "expiration_date"
     t.integer "status"
-    t.string "type"
+    t.string "put_call"
     t.bigint "user_id"
     t.bigint "equity_id"
     t.datetime "created_at", null: false
