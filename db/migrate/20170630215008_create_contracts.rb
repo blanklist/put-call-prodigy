@@ -4,6 +4,7 @@ class CreateContracts < ActiveRecord::Migration[5.1]
       t.string  :ticker
       t.float   :strike_price
       t.float   :spot_price
+      t.float   :sold_price
       t.integer :interval
       t.float   :gain_loss
       t.datetime      :expiration_date

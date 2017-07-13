@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20170708182901) do
     t.string "ticker"
     t.float "strike_price"
     t.float "spot_price"
+    t.float "sold_price"
     t.integer "interval"
     t.float "gain_loss"
     t.datetime "expiration_date"
