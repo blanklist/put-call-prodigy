@@ -12,7 +12,6 @@ class ContractsController < ApplicationController
   end
 
   def new
-    p "within contracts new" + params
     @contract = Contract.new
     # @asset = Asset.find(params[:id])
   end
@@ -28,7 +27,6 @@ class ContractsController < ApplicationController
       @contract.update_attributes(:spot_price => spot_price)
       CalculateGainLossJob.set(wait_until: @contract.expiration).perform_later @contract
       redirect_to equity_path(@equity)
-
     else
       flash[:notice] = "Form is invalid"
       render 'show'
@@ -38,7 +36,7 @@ class ContractsController < ApplicationController
   def show
     # @contract = Contract.find(params[:id])
     @contract.Contract.new
-  
+
   end
 
   private

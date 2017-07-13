@@ -1,11 +1,15 @@
 class UsersController < ApplicationController
+
   def index
     @users = User.all
   end
 
   def new
     @user = User.new
-    render 'users/signup_form'
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def create
@@ -13,7 +17,11 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       redirect_to @user
-      flash[:notice] = "You signed up successfully"
+      # flash[:notice] = "You signed up successfully"
+      respond_to do |format|
+        format.html
+        format.js
+      end
     else
       flash[:notice] = "Form is invalid"
       render 'new'

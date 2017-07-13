@@ -2,7 +2,7 @@
   <%= image_tag("futuristic_door", :id => "login-door")%>
 
   <div id="user-form-container">
-    <%= form_tag 'login', :id => 'login-form' do %>
+    <%= form_tag 'login', :class => 'login-form' do %>
       <p class="fancy-field">
       <label class="placeholder" for="username">USERNAME</label><br/>
         <%= text_field_tag :username, params[:username], class: "fancy-input" %>
@@ -16,9 +16,9 @@
         <%= submit_tag "LOGIN", class: "fancy-button" %>
       </p>
     <% end %>
-
     <h3>
       <a id="register-link" href="/users/new" data-remote="true">NEW HERE? <em>SIGN UP!</em></a>
     </h3>
   </div>
+
 </div>

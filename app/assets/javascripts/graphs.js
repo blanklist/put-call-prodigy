@@ -1,5 +1,5 @@
 $(document).on('turbolinks:load', function (e) {
-  loadGraph(e)
+  //loadGraph(e)
   changeGraph(e);
 });
 

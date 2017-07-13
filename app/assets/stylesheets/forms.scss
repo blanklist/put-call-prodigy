@@ -13,16 +13,15 @@
   position: relative;
   top: 75px;
   left: 100px;
-
   margin-left: 320px;
   max-width: 360px;
   min-width: 275px;
 }
 
-#login-form {
+.login-form {
   display: inline-block;
   position: relative;
-  bottom: 220px;
+  bottom: 240px;
   left: 760px;
   width: 300px;
 }
@@ -33,6 +32,7 @@
   background-color: #F0F0F0;
   padding: 5px;
   font-size: 12px;
+  width: 290px;
 }
 
 .fancy-input {
@@ -40,7 +40,7 @@
   border: none;
   outline: none;
   font-size: 16px;
-  width: 300;
+  width: 270px;
 }
 
 .fancy-button {
@@ -58,9 +58,19 @@
 }
 
 #register-link {
-
   position: relative;
   bottom: 200px;
   left: 760px;
   color: #E24D50;
+
 }
+
+// #new-user-form {
+//   display: none;
+//   float: left;
+//   display: block;
+//   position: relative;
+//   bottom: 200px;
+//   left: 900px;
+//   width: 300px;
+// }
