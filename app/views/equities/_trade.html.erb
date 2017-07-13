@@ -2,10 +2,11 @@
   <p>
     <%= f.label :Trade_for %>
     <%= equity.ticker %>
+    <%= f.hidden_field :ticker, value: equity.ticker %>
   </p>
   <p>
     <%= f.label :Option_Type %>
-    <%= f.select :type, ['Call', 'Put'] %>
+    <%= f.select :put_call, ['Call', 'Put'] %>
   </p>
   <p>
     <%= f.label :Option_interval_in_minutes %>
