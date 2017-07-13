@@ -39,13 +39,13 @@ class ContractsController < ApplicationController
   def show
     # @contract = Contract.find(params[:id])
     @contract.Contract.new
-  
+
   end
 
   private
 
   def contract_params
     params.require(:contract).permit(:ticker, :strike_price, :spot_price, :interval, :user_id, :equity_id)
-    ## add expiration_date & status?
+    ## add status?
   end
 end
