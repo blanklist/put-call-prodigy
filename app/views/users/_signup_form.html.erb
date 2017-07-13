@@ -1,6 +1,5 @@
-<div class="session-container">
-
-  <%= form_for (@user, remote: true) do |f| %>
+<div id='new-user-form'>
+  <%= form_for(@user, remote: true) do |f| %>
     <% if @user.errors.any? %>
       <div class="error_messages">
         <h2>Form is invalid</h2>

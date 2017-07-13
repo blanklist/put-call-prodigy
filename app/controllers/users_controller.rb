@@ -5,6 +5,7 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
+    render 'users/signup_form'
   end
 
   def create
