@@ -1,0 +1,7 @@
+<% @contracts.each do |contract| %>
+Strike price of $<%= contract.strike_price %> on <%= contract.created_at.strftime('%c %Z') %> expiring <%= contract.expiration.strftime('%c %Z') %><br>
+<% end %>
+
+
+
+<!-- .in_time_zone("Pacific Time (US & Canada)").to_s.split(" ").second -->

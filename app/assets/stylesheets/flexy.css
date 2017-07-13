@@ -24,13 +24,26 @@
 .infobox{
   display: block;
   flex-wrap: nowrap;
-  max-width: 400px;
+  max-width: 800px;
 }
 
 .main-image{
   float: left;
-  width: auto;
-  height: auto;
+  min-width: 640px;
   /*max-width: 360px;*/
   display: inline-block;
+}
+
+
+.page-wrapper{
+  margin: 20px;
+}
+
+.fundamental{
+  display: inline-block;
+}
+
+.fundamental-column{
+  float: left;
+  min-width: 30%;
 }

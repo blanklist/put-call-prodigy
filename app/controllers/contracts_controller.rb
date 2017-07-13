@@ -39,7 +39,7 @@ class ContractsController < ApplicationController
   def show
     # @contract = Contract.find(params[:id])
     @contract.Contract.new
-    @current_time = Time.now.in_time_zone("Pacific Time (US & Canada)").to_s.split(" ").second
+  
   end
 
   private
