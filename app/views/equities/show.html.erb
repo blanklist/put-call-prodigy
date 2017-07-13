@@ -26,8 +26,8 @@
     <div id="overview" class='tab'>
       <%= render partial: "overview", locals: {@equity => @equity} %>
     </div>
-    <div id="fundamentals" class='tab'>
-      <%= render partial: "fundamentals" %>
+    <div id="indicators" class='tab'>
+      <%= render partial: "indicators" , locals: {@equity => @equity}  %>
     </div>
     <div id="trade" class='tab'>
       <%= render partial: "trade", locals: {equity: @equity, contract: @contract} %>
