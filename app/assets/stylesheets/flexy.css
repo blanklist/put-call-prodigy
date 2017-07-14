@@ -7,18 +7,23 @@
 .stockbox{
   display: block;
   flex-wrap: nowrap;
-  float: left;
+  position: absolute;
   max-width: 240px;
   background-color: #Blue;
-  border: 1px solid #d3d3d3;
+  border: 3px solid #b3b3b3;
   color: #d3d3d3;
-  padding: 10px 24px;
-  margin: 10px 10px 10px 10px;
   cursor: pointer;
 }
 
+.button {
+  width: 100px;
+  height: 58px;
+  padding: 0px;
+  margin: 0px;
+}
+
 .stockbox div:hover{
-  background: #bbb;
+  background: #F0F0F0;
 }
 
 .bankroll{
@@ -26,19 +31,14 @@
   float: left;
   flex-wrap: nowrap;
   max-width: 240px;
-  background-color: #Blue;
+  background-color: Pink;
   border: 1px solid #d3d3d3;
-  color: #d3d3d3;
+  color: green;
   padding: 10px 24px;
   margin: 10px 10px 10px 10px;
   cursor: pointer;
 }
 
-.infobox{
-  display: block;
-  flex-wrap: nowrap;
-  max-width: 800px;
-}
 
 .main-image{
   float: left;
@@ -52,11 +52,11 @@
   margin: 20px;
 }
 
-.fundamental{
+/*.fundamental{
   display: inline-block;
 }
 
 .fundamental-column{
   float: left;
   min-width: 30%;
-}
+}*/

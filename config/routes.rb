@@ -3,6 +3,10 @@ Rails.application.routes.draw do
 
   resources :users
 
+  resources :users do
+    resources :robots, only: [:edit, :update]
+  end
+
   resources :equities do
     resources :contracts, only: [:create, :new]
   end
@@ -21,5 +25,5 @@ Rails.application.routes.draw do
   get "login" => "sessions#new", :as => "login"
   post "login" => "sessions#create"
 
-  root 'welcome#index'
+  root 'sessions#new'
 end

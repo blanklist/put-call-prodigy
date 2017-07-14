@@ -1,0 +1,80 @@
+
+.session-container {
+  display: block;
+  position: relative;
+  margin-right: 10%;
+  margin-left: 8%;
+  max-width: 1200px;
+  align: center;
+}
+
+#login-door {
+  display: inline-block;
+  position: relative;
+  top: 75px;
+  left: 100px;
+  margin-left: 320px;
+  max-width: 360px;
+  min-width: 275px;
+}
+
+.login-form {
+  display: inline-block;
+  position: relative;
+  bottom: 240px;
+  left: 760px;
+  width: 300px;
+}
+
+.fancy-field {
+  border: 1px solid #b3b3b3;
+  color: #4A4A4A;
+  background-color: #F0F0F0;
+  padding: 5px;
+  font-size: 12px;
+  width: 290px;
+}
+
+.fancy-input {
+  background-color: #F0F0F0;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  width: 270px;
+}
+
+.fancy-button {
+  margin-top: 10px;
+  border: 1px solid #b3b3b3;
+  color: #4A4A4A;
+  background-color: #FFF;
+  padding: 5px;
+  font-size: 14px;
+  width: 100px;
+}
+
+.fancy-button:hover {
+  background-color: #F0F0F0;
+}
+
+#register-link {
+  position: relative;
+  bottom: 200px;
+  left: 760px;
+  color: #E24D50;
+
+}
+
+#user-form-container {
+  overflow: visible !important;
+}
+
+// #new-user-form {
+//   display: none;
+//   float: left;
+//   display: block;
+//   position: relative;
+//   bottom: 200px;
+//   left: 900px;
+//   width: 300px;
+// }

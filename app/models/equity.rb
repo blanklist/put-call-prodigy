@@ -14,7 +14,7 @@ class Equity < ApplicationRecord
   end
 
   def self.get_roc(ticker)
-    AlphaAdapter.roc(ticker)["Technical Analysis: ROC"][Time.now.strftime("%Y-%m-%d")]["ROC"]
+    AlphaAdapter.roc(ticker)["Technical Analysis: ROC"]["2017-07-13"]["ROC"]
   end
 
   def self.get_rsi(ticker)
@@ -50,5 +50,3 @@ class Equity < ApplicationRecord
   end
 
 end
-
-

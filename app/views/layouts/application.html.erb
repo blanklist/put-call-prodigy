@@ -3,7 +3,8 @@
 <html>
   <head>
     <link href="https://fonts.googleapis.com/css?family=Cabin|Raleway" rel="stylesheet">
-    <title>PutCallProdigy</title>
+    <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil" rel="stylesheet">
+    <title>PutCall Prodigy</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <%= csrf_meta_tags %>
@@ -14,8 +15,13 @@
   </head>
   <%= render template: "layouts/_header" %>
   <body>
-    <div class='page-wrapper'>
-      <%= yield %>
+    <div class="container">
+      <div class="jumbotron vertical-center">
+        <%= image_tag("put_call_logo", class: "logo-jumbotron") %>
+      </div>
     </div>
+    <!-- <div class='page-wrapper'> -->
+      <%= yield %>
+    <!-- </div> -->
   </body>
 </html>

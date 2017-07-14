@@ -1,0 +1,32 @@
+#edit-robot-container {
+  position: relative;
+  margin: auto;
+  width: 1000px;
+  height: 1000px;
+
+  #name-form {
+    position: absolute;
+    top: 45px;
+    right: 55%;
+    display: block;
+  }
+
+  #frank-robot {
+    position: absolute;
+    top: 0px;
+    left: 550px;
+    width: 400px;
+  }
+
+
+  #greeting {
+    h2 {
+      position: absolute;
+      right: 40%;
+      top: 265px;
+      text-align: right;
+      font-size: 20px;
+      line-height: 150%;
+    }
+  }
+}

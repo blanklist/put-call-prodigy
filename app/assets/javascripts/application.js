@@ -19,9 +19,3 @@
 //= require menu
 //= require turbolinks
 //= require_tree
-
-
-
-// $( document ).ready(function() {
-//     console.log( "ready!" );
-// });

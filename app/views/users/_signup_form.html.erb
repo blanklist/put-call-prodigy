@@ -1,0 +1,32 @@
+
+
+  <%= form_for(@user, remote: true, html: {class: 'login-form'}) do |f| %>
+    <% if @user.errors.any? %>
+      <div class="error_messages">
+        <h2>Form is invalid</h2>
+        <ul>
+          <% for message in @user.errors.full_messages %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <p class="fancy-field">
+      <%= f.label :username, 'USERNAME' %><br/>
+      <%= f.text_field :username, class: "fancy-input" %>
+    </p>
+    <p class="fancy-field">
+      <%= f.label :email, 'EMAIL' %><br />
+      <%= f.text_field :email, class: "fancy-input" %>
+    </p>
+    <p class="fancy-field">
+      <%= f.label :password, 'PASSWORD' %><br />
+      <%= f.password_field :password, class: "fancy-input" %>
+    </p>
+    <p class="fancy-field">
+      <%= f.label :password_confirmation, 'CONFIRM PASSWORD' %><br />
+      <%= f.password_field :password_confirmation, class: "fancy-input" %>
+    </p>
+
+    <p><%= f.submit 'SUBMIT', class: "fancy-button" %></p>
+  <% end %>

@@ -1,10 +1,8 @@
-
-<% if @equity %>
 <div class='fundamental'>
   <div class='fundamental-column'>
     ROC: <%= @equity.roc %><br>
-    RSI: <%= @equity.rsi %><br>
-    MFI: <%= @equity.mfi %><br>
+    RSL: <%= @equity.rsl %><br>
+    MFL: <%= @equity.mfl %><br>
     ADX: <%= @equity.adx %><br>
     OBV: <%= @equity.obv %><br>
   </div>
@@ -15,6 +13,3 @@
     Stoch_K: <%= @equity.stoch_k %><br>
   </div>
 </div>
-<% else %>
-  <p>You have to choose a stock... fundamentally.</p>
-<% end  %>
