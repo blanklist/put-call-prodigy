@@ -1,7 +1,7 @@
 $( document ).on('turbolinks:load', function() {
   $('.tab').hide();
   infoBox();
-  stockBox();
+  //stockBox();
 });
 
 
@@ -16,23 +16,24 @@ var infoBox = function(){
 
 var stockBox = function(){
   $('.stockbox').find('a').on('click', function(e){
-  // e.preventDefault();
-  $link = $(this).text()
-  console.log('* * * * * * * * *')
-  console.log($link)
-  $.ajax({
-			url: url,
-			type: method,
-		})
-		.done(function(response) {
-			console.log(response);
-			$('.list').append(response);
-			$form.hide();
-			console.log("success");
-		})
-		.fail(function() {
-			console.log("error");
-		})
+    e.preventDefault();
+      var $this = $(this);
+      url = $this.attr('href')
+    debugger
+    $.ajax({
+  			url: url,
+  			method: 'get',
+        data: { ticker: $this.text }
+  		})
+  		.done(function(response) {
+        debugger
+  			console.log(response);
+  			$('.list').append(response);
+  			console.log("success");
+  		})
+  		.fail(function() {
+  			console.log("error");
+  		});
 
 })
 }

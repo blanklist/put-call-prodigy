@@ -9,10 +9,12 @@ class EquitiesController < ApplicationController
 	def show
 		if logged_in?
       @user = current_user
-			@equity = Equity.find_by(id: params[:id])
-      @contracts = current_user.contracts.order("created_at desc").select{|contract| contract.ticker == @equity.ticker }
-			@contract = Contract.new
-			@bankroll = bankroll
+			@equity = Equity.find_by_id(params[:id])
+			p "*" * 100
+			p @equity
+      # @contracts = current_user.contracts.order("created_at desc").select{|contract| contract.ticker == @equity.ticker }
+			# @contract = Contract.new
+			# @bankroll = bankroll
 
     else
       redirect_to new_user_path

@@ -7,7 +7,7 @@ class CreateUsers < ActiveRecord::Migration[5.1]
       t.decimal :bank
       t.integer :bankruptcy_count, default: 0
       t.boolean :first_time, default: true
-      
+    
       t.timestamps
     end
   end

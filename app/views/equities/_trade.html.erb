@@ -1,5 +1,5 @@
-<% if @equity %>
-  <%= form_for [equity, contract], url: equity_contracts_path(equity, contract) do |f| %>
+<% if false && @equity && @contract %>
+  <%= form_tag [equity, contract], url: equity_contracts_path(equity, contract) do |f| %>
     <p>
       <%= f.label :Trade_for %>
       <%= equity.ticker %>

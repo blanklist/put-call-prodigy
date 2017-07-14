@@ -46,11 +46,10 @@
   }
 
   #graph{
-    display: none;
-    float: left;
-    min-width: 640px;
+    position: absolute;
+    left: 100px;
+    width: 500px;
     /*max-width: 360px;*/
-    display: inline-block;
   }
 
 }

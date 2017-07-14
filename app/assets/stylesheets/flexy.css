@@ -39,15 +39,6 @@
   cursor: pointer;
 }
 
-.infobox{
-  display: block;
-  flex-wrap: nowrap;
-  position: absolute;
-  top:730px;
-  left: 340px;
-  width: 1200px;
-
-}
 
 .main-image{
   float: left;

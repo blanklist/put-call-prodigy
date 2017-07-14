@@ -72,6 +72,10 @@ body{
 
 .infobox{
   display: block;
+  flex-wrap: nowrap;
+  position: absolute;
+  top:730px;
+  left: 400px;
   width: 1200px;
 }
 
