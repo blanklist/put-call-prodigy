@@ -23,8 +23,8 @@
 
 .bankroll{
   display: block;
-  flex-wrap: nowrap;
   float: left;
+  flex-wrap: nowrap;
   max-width: 240px;
   background-color: #Blue;
   border: 1px solid #d3d3d3;
