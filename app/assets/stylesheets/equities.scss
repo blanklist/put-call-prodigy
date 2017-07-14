@@ -1,0 +1,45 @@
+#equities-container {
+  // border: 3px red solid;
+  position: relative;
+  margin: auto;
+  width: 1000px;
+  height: 1000px;
+
+  h3 {
+    text-align: right;
+    position: absolute;
+    top: 80px;
+    right: 325px;
+  }
+
+  .stock-link {
+    display: table-cell;
+    vertical-align: middle;
+    color: red;
+    font-size: 18px;
+  }
+
+  #instructions {
+    text-align: right;
+    position: absolute;
+    top: 150px;
+    right: 320px;
+    font-size: 18px;
+  }
+
+  #mentor-robot {
+    position: absolute;
+    top: 0px;
+    right: -50px;
+    width: 400px;
+  }
+
+  #graph{
+    display: none;
+    float: left;
+    min-width: 640px;
+    /*max-width: 360px;*/
+    display: inline-block;
+  }
+
+}

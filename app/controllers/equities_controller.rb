@@ -1,6 +1,10 @@
 class EquitiesController < ApplicationController
 	include ContractsHelper
 
+	def index
+		@user = User.find(session[:user_id])
+	end
+
 	def show
 		if logged_in?
       @user = current_user
