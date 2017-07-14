@@ -3,12 +3,23 @@
   position: relative;
   margin: auto;
   width: 1000px;
-  height: 1000px;
+
+  #bankroll {
+    position: absolute;
+    top: 20px;
+    right: 0px;
+    font-size: 32px;
+
+    #bank-label {
+      position: absolute;
+      left: 30px;
+    }
+  }
 
   h3 {
     text-align: right;
     position: absolute;
-    top: 80px;
+    top: 130px;
     right: 325px;
   }
 
@@ -22,14 +33,14 @@
   #instructions {
     text-align: right;
     position: absolute;
-    top: 150px;
+    top: 220px;
     right: 320px;
     font-size: 18px;
   }
 
   #mentor-robot {
     position: absolute;
-    top: 0px;
+    top: 50px;
     right: -50px;
     width: 400px;
   }

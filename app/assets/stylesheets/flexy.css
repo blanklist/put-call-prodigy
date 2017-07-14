@@ -12,8 +12,6 @@
   background-color: #Blue;
   border: 3px solid #b3b3b3;
   color: #d3d3d3;
-  padding: 10px 24px;
-  margin: 10px 10px 10px 10px;
   cursor: pointer;
 }
 
@@ -33,9 +31,9 @@
   float: left;
   flex-wrap: nowrap;
   max-width: 240px;
-  background-color: #Blue;
+  background-color: Pink;
   border: 1px solid #d3d3d3;
-  color: #d3d3d3;
+  color: green;
   padding: 10px 24px;
   margin: 10px 10px 10px 10px;
   cursor: pointer;
@@ -44,7 +42,11 @@
 .infobox{
   display: block;
   flex-wrap: nowrap;
-  max-width: 800px;
+  position: absolute;
+  top:730px;
+  left: 340px;
+  width: 1200px;
+
 }
 
 .main-image{
@@ -59,11 +61,11 @@
   margin: 20px;
 }
 
-.fundamental{
+/*.fundamental{
   display: inline-block;
 }
 
 .fundamental-column{
   float: left;
   min-width: 30%;
-}
+}*/

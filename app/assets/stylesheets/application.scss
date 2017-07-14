@@ -45,8 +45,9 @@ body{
 
  .tabs a{
    border-radius: 3px 3px 0 0;
-   background: #d6d6d6;
-   color: #333;
+   background: #FFF;
+   border: 1px solid #4a4c4e;
+   color: #4a4c4e;
    display: block;
    padding: 0.5em 1em;
    text-decoration: none;
@@ -54,39 +55,40 @@ body{
 
  .tabs a.current{
    color: black;
-   background: #c15d5d;
+   background: #6ec1cc;
  }
 
  .tabs a:hover{
-   background: #bbd3db;
+   background: #6ec1cc;
  }
 
  .tab{
    background: white;
-   border: 5px solid GhostWhite;
+   border: 1px solid rgba(74, 76, 78, 0.64);
+   border-bottom-left-radius: 5px;
    padding: 1em;
    color:  black;
  }
 
-// .infobox{
-//   display: block;
-//   max-width: 400px;
-// }
+.infobox{
+  display: block;
+  width: 1200px;
+}
 
-// .stockbox{
-//   display: block;
-//   max-width: 240px;
-//   background-color: #Blue;
-//   border: 1px solid #d3d3d3;
-//   color: #d3d3d3;
-//   padding: 10px 24px;
-//   margin: 10px 10px 10px 10px;
-//   cursor: pointer;
-// }
-//
-// .stockbox div:hover{
-//   background: #bbb;
-// }
+.stockbox{
+  display: block;
+  max-width: 240px;
+  background-color: #Blue;
+  border: 1px solid #d3d3d3;
+  color: #d3d3d3;
+  padding: 20px 24px;
+  margin: 10px 10px 10px 10px;
+  cursor: pointer;
+}
+
+.stockbox div:hover{
+  background: #bbb;
+}
 
 .console{
   float: left;

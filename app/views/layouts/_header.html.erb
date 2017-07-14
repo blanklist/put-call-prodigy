@@ -2,11 +2,10 @@
 <%= stylesheet_link_tag 'application' %>
   <div class="topnav" id="myTopnav">
         <% if current_user %>
-          <a href="/">Home</a>
+          <a href="/">About</a>
           <a href="/logout">Logout</a>
         <% else %>
-          <a href="/">Home</a>
-          <a href="/login">Login</a>
+          <a href="/">About</a>
           <a href="/users/new">Register</a>
         <% end %>
   </div>
