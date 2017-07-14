@@ -16,7 +16,6 @@ class ContractsController < ApplicationController
 
 
   def create
-    p "made it to contract create"
     @contract = Contract.new(contract_params)
     if @contract.save
       purchase_time = alpha_time_adjustment(@contract.created_at)

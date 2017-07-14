@@ -1,19 +1,20 @@
-<% if false && @equity && @contract %>
-  <%= form_tag [equity, contract], url: equity_contracts_path(equity, contract) do |f| %>
+<% if @equity %>
+  <%= form_for [equity, contract], url: equity_contracts_path(equity, contract) do |f| %>
     <p>
-      <%= f.label :Trade_for %>
+      <%= f.label :ticker, "Ticker:  " %>
       <%= equity.ticker %>
+      <%= f.hidden_field :ticker, value: equity.ticker %>
     </p>
     <p>
-      <%= f.label :Option_Type %>
-      <%= f.select :type, ['Call', 'Put'] %>
+      <%= f.label :put_call, "Type:  " %>
+      <%= f.select :put_call, ['Call', 'Put'] %>
     </p>
     <p>
-      <%= f.label :Option_interval_in_minutes %>
+      <%= f.label :interval, "Option Interval in Minutes:  " %>
       <%= f.select :interval, ['1', '5', '15', '60'] %>
     </p>
     <p>
-      <%= f.label :strike_price %>
+      <%= f.label :strike_price, "Strike Price:  " %>
       <%= f.number_field :strike_price, class: :text_field, step: :any %>
     </p>
       <%= f.hidden_field :user_id, value: current_user.id %>

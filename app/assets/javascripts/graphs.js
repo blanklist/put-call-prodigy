@@ -4,8 +4,6 @@ $(document).on('turbolinks:load', function (e) {
 
 var changeGraph = function(e) {
   $('.stockbox').find('a').on('click', function(e){
-    // e.preventDefault();
-    debugger
     $ticker = $(this).text()
 
     console.log($ticker);
@@ -19,7 +17,6 @@ var changeGraph = function(e) {
       data: chart_data
     }).done(function (data) {
         // Create the chart
-        debugger
         Highcharts.stockChart('container', {
 
             chart: {

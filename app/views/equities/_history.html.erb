@@ -1,10 +1,10 @@
 
 <% if @contracts %>
-  <%= table_for @contracts do -%>
+  <%= table_for @user.contracts do -%>
       <% column :put_call, :width => "15%" %>
       <% column :strike_price, :width => "15%" %>
       <% column :interval, :width => "15%" %>
-      <% column :expiration_date, :width => "15%" %>
+      <% column :expiration, :width => "15%" %>
       <% column :gain_loss, :width => "15%" %>
   <% end %>
 <% else %>
