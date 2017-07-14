@@ -20,7 +20,7 @@ var changeGraph = function(e) {
         Highcharts.stockChart('container', {
 
             chart: {
-              width: 600
+              width: 650
             },
 
             rangeSelector: {
