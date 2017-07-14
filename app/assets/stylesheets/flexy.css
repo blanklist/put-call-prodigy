@@ -21,6 +21,19 @@
   background: #bbb;
 }
 
+.bankroll{
+  display: block;
+  flex-wrap: nowrap;
+  float: left;
+  max-width: 240px;
+  background-color: #Blue;
+  border: 1px solid #d3d3d3;
+  color: #d3d3d3;
+  padding: 10px 24px;
+  margin: 10px 10px 10px 10px;
+  cursor: pointer;
+}
+
 .infobox{
   display: block;
   flex-wrap: nowrap;
