@@ -1,7 +1,11 @@
 
 <% if @contracts %>
-  <% @contracts.each do |contract| %>
-  Strike price of $<%= contract.strike_price %> on <%= contract.created_at.strftime('%c %Z') %> expiring <%= contract.expiration.strftime('%c %Z') %><br>
+  <%= table_for @contracts do -%>
+      <% column :put_call, :width => "15%" %>
+      <% column :strike_price, :width => "15%" %>
+      <% column :interval, :width => "15%" %>
+      <% column :expiration_date, :width => "15%" %>
+      <% column :gain_loss, :width => "15%" %>
   <% end %>
 <% else %>
   <p>No contracts yet.</p>

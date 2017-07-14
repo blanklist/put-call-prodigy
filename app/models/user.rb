@@ -29,6 +29,12 @@ class User < ApplicationRecord
     end
   end
 
+  def self.calculate_bank
+
+    self.bank = current_user.contracts.sum(:gain_loss)
+
+  end
+
 
 
 end
