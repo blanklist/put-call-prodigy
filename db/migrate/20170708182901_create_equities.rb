@@ -5,8 +5,8 @@ class CreateEquities < ActiveRecord::Migration[5.1]
       t.string :company_name
       t.text :description
       t.decimal :roc
-      t.decimal :rsl
-      t.decimal :mfl
+      t.decimal :rsi
+      t.decimal :mfi
       t.decimal :adx
       t.decimal :obv
       t.decimal :sma
