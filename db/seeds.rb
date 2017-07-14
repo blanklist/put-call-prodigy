@@ -14,6 +14,13 @@ equities.each do |equity|
   Equity.create(ticker: equity)
 end
 
+Equity.update(1, company_name: "Tesla, Inc.", description: "Tesla, Inc. is an American automaker, energy storage company, and solar panel manufacturer based in Palo Alto, California.")
+Equity.update(2, company_name: "Alphabet, Inc.", description: "Alphabet Inc. is an American multinational conglomerate created in a corporate restructuring on October 2, 2015. It is the parent company of Google and several former Google subsidiaries.")
+Equity.update(3, company_name: "Apple Inc.", description: "Apple Inc. is an American multinational technology company headquartered in Cupertino, California that designs, develops, and sells consumer electronics, computer software, and online services.")
+Equity.update(4, company_name: "Facebook Inc.", description: "Facebook is an American for-profit corporation and an online social media and social networking service based in Menlo Park, California.")
+Equity.update(5, company_name: "Twitter Inc.", description: "Twitter is an online news and social networking service where users post and interact with messages, 'tweets', restricted to 140 characters.")
+
+
 equities.each do |equity|
   Equity.find_by(:ticker => equity).update_attributes(:roc => Equity.get_roc(equity))
   p equity + " roc loaded"
