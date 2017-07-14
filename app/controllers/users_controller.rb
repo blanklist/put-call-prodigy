@@ -16,8 +16,6 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      p "*" * 100
-      p @user
       respond_to do |format|
         format.html
         format.js

@@ -1,1 +1,34 @@
-<h1>Show Frank here</h1>
+<div id="edit-robot-container">
+  <div id="greeting">
+      <h2>Welcome to PCP 🖖🏻 <br>
+          My name is Frank. That-it. <br>
+          Your mentor robot is <br>
+          being created as we speak.
+        </h2>
+  </div>
+  <div id="name-form">
+    <h4>Please give your mentor robot a name:</h4> <br>
+
+    <%= form_tag(user_robot_path ,method: "patch", remote: true, html: {id: 'change-robot-name'}) do %>
+      <% if @robot.errors.any? %>
+        <div class="error_messages">
+          <h2>Form is invalid</h2>
+          <ul>
+            <% for message in @user.errors.full_messages %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <p class="fancy-field">
+        <%= label_tag(:name, 'ROBOT NAME') %>
+        <%= text_field_tag(:name, nil, class:"fancy-input") %>
+      </p>
+
+      <p><%= submit_tag('SUBMIT', class: "fancy-button") %></p>
+    <% end %>
+  </div>
+  <div id="frank-robot">
+    <%= image_tag("frank", :id => "manager")%>
+  </div>
+</div>
