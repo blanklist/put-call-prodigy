@@ -1,4 +1,8 @@
-<% if false %><!-- Ticker: <%= @equity.ticker %><br>
+
+<% if @equity %>
+Ticker: <%= @equity.ticker %><br>
 Name: <%= @equity.company_name %><br>
-Description: <%= @equity.description %><br> -->
+Description: <%= @equity.description %><br>
+<% else %>
+<p> Choose a ticker up there! </p>
 <% end %>

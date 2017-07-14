@@ -1,5 +1,5 @@
-<% if false %>
-<!--
+
+<% if @equity %>
 <div class='fundamental'>
   <div class='fundamental-column'>
     ROC: <%= @equity.roc %><br>
@@ -14,5 +14,7 @@
     Stoch_D: <%= @equity.stoch_d %><br>
     Stoch_K: <%= @equity.stoch_k %><br>
   </div>
-</div> -->
-<% end %>
+</div>
+<% else %>
+  <p>You have to choose a stock... fundamentally.</p>
+<% end  %>
