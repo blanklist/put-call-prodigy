@@ -14,7 +14,7 @@ class Equity < ApplicationRecord
   end
 
   def self.get_roc(ticker)
-    AlphaAdapter.roc(ticker)["Technical Analysis: ROC"]["2017-07-13"]["ROC"]
+    AlphaAdapter.roc(ticker)["Technical Analysis: ROC"]["2017-07-07"]["ROC"]
   end
 
   def self.get_rsi(ticker)
@@ -22,7 +22,7 @@ class Equity < ApplicationRecord
   end
 
   def self.get_mfi(ticker)
-    AlphaAdapter.mfi(ticker)["Technical Analysis: MFI"]["2017-07-13"]["MFI"]
+    AlphaAdapter.mfi(ticker)["Technical Analysis: MFI"]["2017-07-07"]["MFI"]
   end
 
   def self.get_adx(ticker)
@@ -30,15 +30,15 @@ class Equity < ApplicationRecord
   end
 
   def self.get_obv(ticker)
-    AlphaAdapter.obv(ticker)["Technical Analysis: OBV"]["2017-07-13"]["OBV"]
+    AlphaAdapter.obv(ticker)["Technical Analysis: OBV"]["2017-07-07"]["OBV"]
   end
 
   def self.get_sma(ticker)
-    AlphaAdapter.sma(ticker)["Technical Analysis: SMA"]["2017-07-13"]["SMA"]
+    AlphaAdapter.sma(ticker)["Technical Analysis: SMA"]["2017-07-07"]["SMA"]
   end
 
   def self.get_ema(ticker)
-    AlphaAdapter.ema(ticker)["Technical Analysis: EMA"]["2017-07-13"]["EMA"]
+    AlphaAdapter.ema(ticker)["Technical Analysis: EMA"]["2017-07-07"]["EMA"]
   end
 
   def self.get_stoch_d(ticker)
