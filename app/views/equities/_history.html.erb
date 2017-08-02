@@ -1,11 +1,12 @@
 
 <% if @contracts %>
   <%= table_for @user.contracts do -%>
-      <% column :put_call, :width => "15%" %>
-      <% column :strike_price, :width => "15%" %>
-      <% column :interval, :width => "15%" %>
-      <% column :expiration, :width => "15%" %>
-      <% column :gain_loss, :width => "15%" %>
+      <% column :ticker, :width => "10%" %>
+      <% column :put_call, :width => "10%" %>
+      <% column :strike_price, :width => "10%" %>
+      <% column :interval, :width => "10%" %>
+      <% column :expiration, :width => "10%" %>
+      <% column :gain_loss, :width => "10%" %>
   <% end %>
 <% else %>
   <p>No contracts yet.</p>
