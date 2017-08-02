@@ -4,11 +4,15 @@ class Equity < ApplicationRecord
 
   has_many :contracts
 
+  def self.last_refreshed(ticker)
+    AlphaAdapter.search(ticker)["Meta Data"]["3. Last Refreshed"]
+  end
+
   def self.get_by_ticker(ticker)
     AlphaAdapter.search(ticker)
   end
 
-  def self.get_price(ticker, time)
+  def self.get_price(ticker, time = last_refreshed(ticker))
     response = Equity.get_by_ticker(ticker)
     price = response["Time Series (1min)"][time]["4. close"]
   end
