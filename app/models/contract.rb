@@ -1,8 +1,11 @@
 class Contract < ApplicationRecord
+  include ContractsHelper
+
   belongs_to :user
+  belongs_to :equity
 
   def expiration
-    self.created_at.time + self.interval.minutes
+    created_at.time + interval.minutes
   end
 
 end

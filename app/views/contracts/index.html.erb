@@ -1,9 +1,63 @@
-<h1>Contracts Index Page</h1>
+<!-- <h1>Contracts Index Page</h1>
 
 <p>
   <%= link_to 'User Show Page', user_path(current_user) %>
 </p>
 
-<p>
-<%= link_to 'Buy a contract', new_contract_path(@contracts) %>
-</p>
+<h3><%= @current_time %></h3>
+
+
+<h4><%= link_to 'Trade Forex Markets', assets_path %></h4>
+
+<% @contracts.each do |contract| %>
+  <tr>
+    <td><%= link_to contract.ticker, contract_path(contract) %></td>
+  </tr><br>
+  <tr>
+    <% if contract.strike_price %>
+      <td>Strike Price: $<%= contract.strike_price %></td><br>
+      <td>Created at: <%= contract.created_at.in_time_zone("Pacific Time (US & Canada)") %></td><br>
+      <td>Expiration: <%= contract.expiration.in_time_zone("Pacific Time (US & Canada)") %></td><br>
+      <td>Spot Price: $<%= contract.spot_price %></td><br>
+    <% end %>
+    <% if contract.gain_loss == nil %>
+      <% CalculateGainLossJob.set(wait_until: contract.expiration).perform_later contract %>
+        <td><%= contract.gain_loss %></td><br>
+    <% else %>
+      <td><%= contract.gain_loss %></td><br>
+    <% end %>
+  </tr><br>
+
+<% end %>
+
+<div  class='main-image' ><%= render 'graphs/graph' %></div>
+
+<div class='console'>
+
+  <div class='stockbox'>
+    <div class='button'><%= link_to "TSLA", contracts_path(:ticker => 'tsla')%></div>
+    <div class='button'><%= link_to "GOOGL", contracts_path(:ticker => 'googl') %></div>
+    <div class='button'><%= link_to "AAPL", contracts_path(:ticker => 'aapl') %></div>
+    <div class='button'><%= link_to "FB", contracts_path(:ticker => 'fb') %></div>
+    <div class='button'><%= link_to "TWTR", contracts_path(:symbol => 'twtr') %></div>
+  </div>
+</div>
+
+<div class='infobox'>
+   <ul class="tabs">
+      <li><a href='#overview'>Overview</a></li>
+      <li><a href='#fundamentals'>Fundamentals</a></li>
+      <li><a href='#trade'>Trade</a></li>
+  </ul>
+  <div class='items'>
+    <div id="overview" class='tab'>
+      <%= render partial: "overview" %>
+    </div>
+    <div id="fundamentals" class='tab'>
+      <%= render partial: "fundamentals" %>
+    </div>
+    <div id="trade" class='tab'>
+      <%= render partial: "trade" %>
+    </div>
+  </div>
+</div> -->

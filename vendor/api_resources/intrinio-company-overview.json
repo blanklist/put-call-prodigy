@@ -1,0 +1,60 @@
+// API URI: https://api.intrinio.com
+// GET: /companies?identifier=AA
+// FULL URL: https://api.intrinio.com/companies?identifier=AA
+
+{
+    "ticker": "AA",
+    "name": "Alcoa Inc",
+    "lei": "ABPN11VOHLHX6QR7XQ48",
+    "legal_name": "Alcoa Inc.",
+    "stock_exchange": "NYSE",
+    "sic": 3350,
+    "short_description": "Alcoa Inc. engages in engineering and manufacturing lightweight metals worldwide. The company operates through five segments: Alumina, Primary Metals, Global Rolled Products, Engineered Products and Solutions, and Transport and Construction Soluti...",
+    "long_description": "Alcoa Inc. engages in engineering and manufacturing lightweight metals worldwide. The company operates through five segments: Alumina, Primary Metals, Global Rolled Products, Engineered Products and Solutions, and Transport and Construction Solutions. The Alumina segment mines for bauxite, refines it for producing alumina, and sells alumina directly to external smelter customers, or to customers who process it into industrial chemical products. The Primary Metals segment produces and sells primary aluminum to external customers and traders. This segment also sells aluminum powder, scrap, and excess energy, as well as purchases and resells metals. The Global Rolled Products segment produces and sells aluminum sheets and plates to the packaging end market for the production of aluminum cans, as well as to the aerospace, automotive, commercial transportation, building and construction, and industrial products end markets. This segment also produces aseptic foils for the packaging end market. The Engineered Products and Solutions segment offers fastening systems, including titanium, steel, and nickel alloys; seamless rolled rings, such as nickel alloys; investment castings, including airfoils and forged jet engine components; and various forging and extrusion metal products. This segment serves aerospace, commercial transportation, power generation, oil and gas, industrial products, automotive, and land and sea defense end markets. The Transport and Construction Solutions segment provides integrated aluminum structural systems, architectural extrusions, and forged aluminum commercial vehicle wheels, as well as aluminum products. The segment serves nonresidential building and construction, commercial transportation, and industrial products end markets. The company sells its products directly to customers, as well as through distributors, agents, and alumina traders. Alcoa Inc. was founded in 1888 and is based in New York, New York.",
+    "ceo": "Klaus-Christian Kleinfeld",
+    "company_url": "http://www.alcoa.com",
+    "business_address": "390 PARK AVENUE, NEW YORK, NY 10022-4608",
+    "mailing_address": "390 PARK AVENUE, NEW YORK, NY 10022-4608",
+    "business_phone_no": "2128362732",
+    "hq_address1": "390 Park Avenue",
+    "hq_address2": null,
+    "hq_address_city": "New York",
+    "hq_address_postal_code": "10022",
+    "entity_legal_form": "INCORPORATED",
+    "securities": [
+        {
+            "ticker": "AA",
+            "figi_ticker": "AA:US",
+            "figi": "BBG000B9WH86",
+            "security_name": "ALCOA INC",
+            "market_sector": "Equity",
+            "security_type": "Common Stock",
+            "stock_exchange": "NYSE",
+            "last_crsp_adj_date": "2016-10-06",
+            "composite_figi": "BBG000B9WH86",
+            "figi_uniqueid": "EQ0010004600001000",
+            "share_class_figi": "BBG001S5C3C2",
+            "figi_exch_cntry": "US",
+            "currency": "USD",
+            "mic": "XNYS",
+            "exch_symbol": "^XNYS",
+            "etf": false,
+            "delisted_security": false,
+            "primary_listing": true
+        },
+        ...
+    ],
+    "cik": "0000004281",
+    "latest_filing_date": "2017-02-06",
+    "hq_state": "New York",
+    "hq_country": "United States of America",
+    "inc_state": "Pennsylvania",
+    "inc_country": "United States of America",
+    "employees": 60000,
+    "entity_status": "ACTIVE",
+    "sector": "Basic Materials",
+    "industry_category": "Metals & Mining",
+    "industry_group": "Aluminum",
+    "template": "industrial",
+    "standardized_active": true
+}

@@ -10,26 +10,62 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170630215008) do
+ActiveRecord::Schema.define(version: 20170713190011) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "contracts", force: :cascade do |t|
     t.string "ticker"
-    t.integer "strike_price"
+    t.float "strike_price"
+    t.float "spot_price"
+    t.float "sold_price"
     t.integer "interval"
+    t.float "gain_loss"
+    t.datetime "expiration_date"
+    t.integer "status"
+    t.string "put_call"
     t.bigint "user_id"
+    t.bigint "equity_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["equity_id"], name: "index_contracts_on_equity_id"
     t.index ["user_id"], name: "index_contracts_on_user_id"
+  end
+
+  create_table "equities", force: :cascade do |t|
+    t.string "ticker"
+    t.string "company_name"
+    t.text "description"
+    t.decimal "roc"
+    t.decimal "rsi"
+    t.decimal "mfi"
+    t.decimal "adx"
+    t.decimal "obv"
+    t.decimal "sma"
+    t.decimal "ema"
+    t.decimal "stoch_d"
+    t.decimal "stoch_k"
+    t.decimal "price_data"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "robots", force: :cascade do |t|
+    t.string "name"
+    t.string "summon"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
     t.string "username", null: false
     t.string "email", null: false
     t.string "password_digest", null: false
-    t.integer "bank"
+    t.decimal "bank"
+    t.integer "bankruptcy_count", default: 0
+    t.boolean "first_time", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

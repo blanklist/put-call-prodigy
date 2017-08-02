@@ -1,0 +1,46 @@
+// API URI: https://api.intrinio.com
+// GET: /options/historical?ticker=AAPL&expiration=2017-03-03&type=put&strike=127
+// FULL URL: https://api.intrinio.com/options/historical?ticker=AAPL&expiration=2017-03-03&type=put&strike=127
+
+{
+    "result_count": 23,
+    "page_size": 250,
+    "current_page": 1,
+    "total_pages": 1,
+    "api_call_credits": 1,
+    "data": [
+        {
+            "date": "2017-02-14",
+            "close": 8.225,
+            "close_bid": 8.15,
+            "close_ask": 8.3,
+            "volume": 37,
+            "volume_bid": 36,
+            "volume_ask": 1,
+            "trades": 5,
+            "open_interest": 288,
+            "open_interest_change": -27,
+            "next_day_open_interest": 309,
+            "implied_volatility": 0.19727,
+            "implied_volatility_change": 0.016137,
+            "delta": 0.928281
+        },
+          {
+            "date": "2017-02-13",
+            "close": 6.6,
+            "close_bid": 6.5,
+            "close_ask": 6.7,
+            "volume": 39,
+            "volume_bid": 4,
+            "volume_ask": 0,
+            "trades": 3,
+            "open_interest": 315,
+            "open_interest_change": -3,
+            "next_day_open_interest": 288,
+            "implied_volatility": 0.181133,
+            "implied_volatility_change": 0.024007,
+            "delta": 0.889855
+        },
+        ...
+    ]
+}
