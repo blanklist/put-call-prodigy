@@ -3,11 +3,11 @@
 <%= form_for @contract do |f| %>
   <p>
     <%= f.label :ticker %>
-    <%= f.select(:ticker, [['APPL'], ['TSLA'], ['AMZN'], ['FB']], { :prompt => "Please select"}) %>
+    <%= f.text_field :ticker %>
   </p>
   <p>
     <%= f.label :strike_price %>
-    <%= f.number_field :strike_price %>
+    <%= f.number_field :strike_price, class: :text_field, step: :any %>
   </p>
   <p>
     <%= f.label :interval %>

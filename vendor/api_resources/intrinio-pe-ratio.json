@@ -1,0 +1,9 @@
+// API URI: https://api.intrinio.com
+// GET: /data_point?identifier=AAPL&item=pricetoearnings
+// FULL URL: https://api.intrinio.com/data_point?identifier=AAPL&item=pricetoearnings
+
+{
+  "identifier": "AAPL",
+  "item": "pricetoearnings",
+  "value": 17.8763
+}

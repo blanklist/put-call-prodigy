@@ -1,0 +1,55 @@
+<div id="equities-container">
+  <div id="graph"><%= render 'graphs/graph' %></div>
+
+  <div class='stockbox'>
+    <div class='button'><%= link_to "TSLA", equity_path(1), class: 'stock-link' %></div>
+    <div class='button'><%= link_to "GOOGL", equity_path(2), class: 'stock-link'  %></div>
+    <div class='button'><%= link_to "AAPL", equity_path(3), class: 'stock-link' %></div>
+    <div class='button'><%= link_to "FB", equity_path(4), class: 'stock-link' %></div>
+    <div class='button'><%= link_to "TWTR", equity_path(5), class: 'stock-link' %></div>
+  </div>
+
+  <h3 id="ohhey">Hey <%= @user.username.capitalize %>! </h3>
+  <p id="instructions" >It's me, <%= @user.robot.name.capitalize %>.
+    <br>I'm your mentor robot here at PCP.
+    <br>On your left are the stocks
+    <br>that you can play with.
+    <br>Go ahead and click one of them.
+  </p>
+
+  <div id="mentor-robot">
+    <img src="<%= @user.robot.summon %>" alt="Robot Mentor">
+  </div>
+
+  <div id='bankroll'>
+    <div id=bank-label>BANK</div>
+    <br><%= dollar_plus_decimal(@user.bank) %></div>
+  </div>
+
+
+  <div class=infobox>
+    <br>
+    <br>
+     <ul class="tabs">
+        <li><a href='#overview'>Overview</a></li>
+        <li><a href='#fundamentals'>Fundamentals</a></li>
+        <li><a href='#trade'>Trade</a></li>
+        <li><a href='#history'>History</a></li>
+    </ul>
+    <div class='items'>
+      <div id="overview" class='tab'>
+        <%= render partial: "overview", locals: {@equity => @equity} %>
+      </div>
+      <div id="fundamentals" class='tab'>
+        <%= render partial: "indicators" %>
+      </div>
+      <div id="trade" class='tab'>
+        <%= render partial: "trade", locals: {equity: @equity, contract: @contract} %>
+      </div>
+      <div id="history" class='tab'>
+        <%= render partial: "history", locals: {equity: @equity, contract: @contract} %>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,1 @@
+p AlphaAdapter.search('MSFT')

@@ -1,0 +1,28 @@
+// API URI: https://api.intrinio.com
+// GET: /options?ticker=AAPL
+// FULL URL: https://api.intrinio.com/options?ticker=AAPL
+
+{
+    "result_count": 46637,
+    "page_size": 250,
+    "current_page": 1,
+    "total_pages": 187,
+    "api_call_credits": 1,
+    "data": [
+        {
+            "identifier": "AAPL190118C00195000",
+            "ticker": "AAPL",
+            "expiration": "2019-01-18",
+            "strike": 195,
+            "type": "call"
+        },
+        {
+            "identifier": "AAPL190118P00195000",
+            "ticker": "AAPL",
+            "expiration": "2019-01-18",
+            "strike": 195,
+            "type": "put"
+        },
+        ...
+    ]
+}
