@@ -8,17 +8,27 @@ class Equity < ApplicationRecord
     AlphaAdapter.search(ticker)["Meta Data"]["3. Last Refreshed"]
   end
 
-  def self.get_by_ticker(ticker)
-    AlphaAdapter.search(ticker)
-  end
+  # def self.get_by_ticker(ticker)
+  #   AlphaAdapter.search(ticker)
+  # end
+
+  # def self.get_price(ticker, time = last_refreshed(ticker))
+  #   response = Equity.get_by_ticker(ticker)
+  #   price = response["Time Series (1min)"][time]["4. close"]
+  # end
 
   def self.get_price(ticker, time = last_refreshed(ticker))
-    response = Equity.get_by_ticker(ticker)
+    response = AlphaAdapter.search(ticker)
     price = response["Time Series (1min)"][time]["4. close"]
   end
 
-  def self.get_roc(ticker)
-    AlphaAdapter.roc(ticker)["Technical Analysis: ROC"]["2017-07-07"]["ROC"]
+  # def self.get_roc(ticker, time = last_refreshed(ticker))
+  #   AlphaAdapter.roc(ticker)["Technical Analysis: ROC"]["3. Last Refreshed"]["ROC"]
+  # end
+
+  def self.get_roc(ticker, time = last_refreshed(ticker))
+    response = AlphaAdapter.roc(ticker)
+    return response["Technical Analysis: ROC"]["2017-08-04"]["ROC"]
   end
 
   def self.get_rsi(ticker)
