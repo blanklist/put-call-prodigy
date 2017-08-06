@@ -19,19 +19,19 @@ class ContractsController < ApplicationController
     @contract = Contract.new(contract_params)
     if @contract.save
       purchase_time = alpha_time_adjustment(@contract.created_at)
-      today_date = Time.now.strftime("%Y-%m-%d")
-      p purchase_time
-      p today_date + " 15:59:00"
-      if purchase_time > today_date + " 15:59:00" || Date.today.saturday? || Date.today.sunday?
-        puts "here"
-        spot_price = Equity.get_price(@contract.ticker)
-      else
-        puts "there"
+      if markets_open?
         spot_price = Equity.get_price(@contract.ticker, purchase_time)
+      else
+        spot_price = Equity.get_price(@contract.ticker)
       end
       @equity = Equity.find(params[:equity_id])
       @contract.update_attributes(:spot_price => spot_price)
-      CalculateGainLossJob.set(wait_until: @contract.expiration).perform_later @contract
+      if markets_open?
+        CalculateGainLossJob.set(wait_until: @contract.expiration).perform_later @contract
+      else
+        gain_loss = 0
+        @contract.update_attributes(:gain_loss => gain_loss)
+      end
       redirect_to equity_path(@equity)
     else
       flash[:notice] = "Form is invalid"

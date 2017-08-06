@@ -2,17 +2,17 @@
 <% if @equity %>
 <div class='fundamental'>
   <div class='fundamental-column'>
-    ROC: <%= @equity.roc %><br>
-    RSI: <%= @equity.rsi %><br>
-    MFI: <%= @equity.mfi %><br>
-    ADX: <%= @equity.adx %><br>
-    OBV: <%= @equity.obv %><br>
+    Rate of Change(ROC): <%= @equity.roc %><br>
+    Relative Strength Index(RSI): <%= @equity.rsi %><br>
+    Money Flow Index(MFI): <%= @equity.mfi %><br>
+    Average Directional Movement Index(ADX): <%= @equity.adx %><br>
+    On Balance Volume(OBV): <%= @equity.obv %><br>
   </div>
   <div class='fundamental-column'>
-    SMA: <%= @equity.sma %><br>
-    EMA: <%= @equity.ema %><br>
-    Stoch_D: <%= @equity.stoch_d %><br>
-    Stoch_K: <%= @equity.stoch_k %><br>
+    Simple Moving Average(SMA): <%= @equity.sma %><br>
+    Exponential Moving Average(EMA): <%= @equity.ema %><br>
+    Stochastic_D: <%= @equity.stoch_d %><br>
+    Stochastic_K: <%= @equity.stoch_k %><br>
   </div>
 </div>
 <% else %>
