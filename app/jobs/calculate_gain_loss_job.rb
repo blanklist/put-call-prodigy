@@ -7,9 +7,9 @@ class CalculateGainLossJob < ApplicationJob
     sold_price = Equity.get_price(contract.ticker, sold_time)
     contract.update_attributes(:sold_price => sold_price)
     if contract.put_call = 'Call'
-      gain_loss = sold_price.to_f - contract.strike_price.to_f
+      gain_loss = (sold_price.to_f - contract.strike_price.to_f).round(4)
     else
-      gain_loss = contract.strike_price.to_f - sold_price.to_f
+      gain_loss = (contract.strike_price.to_f - sold_price.to_f).round(4)
     end
     if gain_loss < 0
       gain_loss = 0
