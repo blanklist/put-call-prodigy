@@ -63,7 +63,7 @@ ActiveRecord::Schema.define(version: 20170713190011) do
     t.string "username", null: false
     t.string "email", null: false
     t.string "password_digest", null: false
-    t.decimal "bank"
+    t.float "bank"
     t.integer "bankruptcy_count", default: 0
     t.boolean "first_time", default: true
     t.datetime "created_at", null: false

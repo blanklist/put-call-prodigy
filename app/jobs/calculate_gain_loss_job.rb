@@ -2,7 +2,7 @@ class CalculateGainLossJob < ApplicationJob
   include ContractsHelper
   queue_as :default
 
-  def perform(contract)
+  def perform(contract, user)
     sold_time = alpha_time_adjustment(contract.created_at.time + contract.interval.minutes)
     sold_price = Equity.get_price(contract.ticker, sold_time)
     contract.update_attributes(:sold_price => sold_price)
@@ -15,5 +15,6 @@ class CalculateGainLossJob < ApplicationJob
       gain_loss = 0
     end
     contract.update_attributes(:gain_loss => gain_loss)
+    user.calculate_bank
   end
 end

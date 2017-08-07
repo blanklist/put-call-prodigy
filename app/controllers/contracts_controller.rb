@@ -27,7 +27,7 @@ class ContractsController < ApplicationController
       @equity = Equity.find(params[:equity_id])
       @contract.update_attributes(:spot_price => spot_price)
       if markets_open?
-        CalculateGainLossJob.set(wait_until: @contract.expiration).perform_later @contract
+        CalculateGainLossJob.set(wait_until: @contract.expiration).perform_later @contract, current_user
       else
         gain_loss = 0
         @contract.update_attributes(:gain_loss => gain_loss)
