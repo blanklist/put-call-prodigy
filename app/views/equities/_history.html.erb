@@ -1,6 +1,6 @@
 
 <% if @contracts %>
-  <%= table_for @user.contracts do -%>
+  <%= table_for contracts do -%>
       <% column :ticker, :width => "10%" %>
       <% column :put_call, :width => "10%" %>
       <% column :strike_price, :width => "10%" %>

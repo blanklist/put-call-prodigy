@@ -46,7 +46,7 @@
         <%= render partial: "trade", locals: {equity: @equity, contract: @contract} %>
       </div>
       <div id="history" class='tab'>
-        <%= render partial: "history", locals: {equity: @equity, contract: @contract} %>
+        <%= render partial: "history", locals: {equity: @equity, contract: @contract, contracts: @contracts} %>
       </div>
     </div>
   </div>
