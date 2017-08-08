@@ -1,5 +1,6 @@
 class ContractsController < ApplicationController
   include ContractsHelper
+  require_relative '../models/graph_data'
 
   def index
     if logged_in?
@@ -13,7 +14,6 @@ class ContractsController < ApplicationController
   def new
     @contract = Contract.new
   end
-
 
   def create
     @contract = Contract.new(contract_params)
