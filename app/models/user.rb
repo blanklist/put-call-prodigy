@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   has_secure_password
   has_one :robot
-	has_many :contracts
+	has_many :contracts #, :order => 'created_at DESC'
 
   before_save :assign_robot
   before_save :fund_bank
