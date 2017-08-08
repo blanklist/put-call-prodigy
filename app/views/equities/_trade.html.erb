@@ -1,4 +1,8 @@
 <% if @equity %>
+  <% if !markets_open? %>
+    <p>Markets are currently closed. Any contract created will default to a $0 gain/loss.</p>
+  <% end %>
+  
   <%= form_for [equity, contract], url: equity_contracts_path(equity, contract) do |f| %>
     <p>
       <%= f.label :ticker, "Ticker:  " %>
