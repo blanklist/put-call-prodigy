@@ -57,3 +57,4 @@ Quandl provided our project with historical information. If we need to populate 
 📌 Tim P. ([timparkyn](https://github.com/timparkyn))
 
 📌 Joanna J. ([elainefirefly](https://github.com/elainefirefly))
+
