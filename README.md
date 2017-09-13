@@ -3,7 +3,8 @@
 Put Call Prodigy is a educational platform developed to teach user option trading strategies through simplifying and gamifying options trading. Put Call Prodigy allows users to trade options with in-game currency using live quotes.
 
 
-![Demo](https://gfycat.com/gifs/detail/SilverFrighteningButterfly)
+![Demo](https://thumbs.gfycat.com/SilverFrighteningButterfly-size_restricted.gif)
+
 
 
 ## 📈 Simplification & Gamification
@@ -54,7 +55,22 @@ Quandl provided our project with historical information. If we need to populate 
 -----------------------
 Below is a collection of screenshots from the demo above with an explanation of the user interaction.
 
-**Underlying Assets** We eliminated the fact that exercising options results in purchasing an underlying asset for portfolio building. Portfolio building is a tedious act when one is trying to learn the underlying concepts of options trading.
+
+**Log-In and Instructor Assignment**
+![Log-In and Instructor Assignment](https://media.giphy.com/media/N3knJvc4m63UQ/giphy.gif)
+
+**Log-In**
+![Log-In and Instructor Assignment](https://media.giphy.com/media/N3knJvc4m63UQ/giphy.gif)
+
+**Log-In**
+![Log-In and Instructor Assignment](https://media.giphy.com/media/N3knJvc4m63UQ/giphy.gif)
+
+**Log-In**
+![Log-In and Instructor Assignment](https://media.giphy.com/media/N3knJvc4m63UQ/giphy.gif)
+
+**Log-In**
+
+
 
 
 
