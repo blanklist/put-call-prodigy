@@ -6,7 +6,6 @@ Put Call Prodigy is a educational platform developed to teach user option tradin
 ![Demo](https://thumbs.gfycat.com/SilverFrighteningButterfly-size_restricted.gif)
 
 
-
 ## 📈 Simplification & Gamification
 -----------------------
 There are several aspects to options trading that often confuse users and overcomplicate simple concepts. Traditional educational platforms tend to overload the user with too much information. To make the user experience easier, we sought to simplify several aspects of options trading.  
@@ -28,14 +27,12 @@ There are several aspects to options trading that often confuse users and overco
 Many of the traditional platforms that introduce users to options trading assume that the user is well versed in equity trading. We did not take this approach in development. We tried to simplify all components of options trading so that my 90 year old grandmother could develop a logical approach to options trading. Technical indicators, trading strategies, and other concepts are introduced incrementally as the user progresses through levels, not overloading the user with information.  
 
 
-
 ## 📈 Education
 ----------------------
 Our main goal for Put Call Prodigy was to teach our users about options trading strategies. To do this we needed to provide our users with an incremental introduction to the subject matter. By implementing level progression we were able to limit the amount of information given to our users. At first, the user is introduced to buying a call and buying a put. Once they have achieved a certain amount of return for each of the trading strategies, the user then progresses to the next level which incrementally introduces a more complex trading strategy with each new level. This reduces confusion and increases user retention.
 
 
 ![Level Progression](https://github.com/blanklist/put-call-prodigy/blob/master/levels.png?raw=true)
-
 
 
 ## 📈 API Integration
@@ -51,29 +48,6 @@ Due to our desire to build a platform that operated with live market data, findi
 Quandl provided our project with historical information. If we need to populate our real-time graph with data that exceed the 3 month time horizon, Quandl provided the answer. If you are interested in doing equity research or any other type of historical quantitative analysis, I highly recommend exploring [Quandl](https://www.quandl.com/tools/api)
 
 
-## 📈 User Story
------------------------
-Below is a collection of screenshots from the demo above with an explanation of the user interaction.
-
-
-**Log-In and Instructor Assignment**
-![Log-In and Instructor Assignment](https://media.giphy.com/media/N3knJvc4m63UQ/giphy.gif)
-
-**Log-In**
-![Log-In and Instructor Assignment](https://media.giphy.com/media/N3knJvc4m63UQ/giphy.gif)
-
-**Log-In**
-![Log-In and Instructor Assignment](https://media.giphy.com/media/N3knJvc4m63UQ/giphy.gif)
-
-**Log-In**
-![Log-In and Instructor Assignment](https://media.giphy.com/media/N3knJvc4m63UQ/giphy.gif)
-
-**Log-In**
-
-
-
-
-
 ## Team
 ------------------
 📌 Joe H. ([blanklist](https://github.com/blanklist))
@@ -83,3 +57,4 @@ Below is a collection of screenshots from the demo above with an explanation of 
 📌 Tim P. ([timparkyn](https://github.com/timparkyn))
 
 📌 Joanna J. ([elainefirefly](https://github.com/elainefirefly))
+
