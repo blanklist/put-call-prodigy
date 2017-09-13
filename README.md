@@ -6,6 +6,7 @@ Put Call Prodigy is a educational platform developed to teach user option tradin
 ![Demo](https://thumbs.gfycat.com/SilverFrighteningButterfly-size_restricted.gif)
 
 
+
 ## 📈 Simplification & Gamification
 -----------------------
 There are several aspects to options trading that often confuse users and overcomplicate simple concepts. Traditional educational platforms tend to overload the user with too much information. To make the user experience easier, we sought to simplify several aspects of options trading.  
@@ -54,6 +55,7 @@ Quandl provided our project with historical information. If we need to populate 
 -----------------------
 Below is a collection of screenshots from the demo above with an explanation of the user interaction.
 
+
 **Log-In and Instructor Assignment**
 ![Log-In and Instructor Assignment](https://media.giphy.com/media/N3knJvc4m63UQ/giphy.gif)
 
@@ -69,7 +71,7 @@ Below is a collection of screenshots from the demo above with an explanation of 
 **Log-In**
 
 
-**Log-In**
+
 
 
 ## Team
