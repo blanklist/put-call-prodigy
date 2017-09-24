@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   has_secure_password
   has_one :robot
-	has_many :contracts
+	has_many :contracts #, :order => 'created_at DESC'
 
   before_save :assign_robot
   before_save :fund_bank
@@ -14,11 +14,15 @@ class User < ApplicationRecord
   accepts_nested_attributes_for :robot, allow_destroy: true
 
   def assign_robot
-    self.robot_attributes = { name: "YOLO" }
+    if self.robot == nil
+      self.robot_attributes = { name: "YOLO" }
+    end
   end
 
   def fund_bank
-    self.bank = 500.00
+    if self.bank == nil
+      self.bank = 500.00
+    end
   end
 
   def logged_in?
@@ -35,6 +39,7 @@ class User < ApplicationRecord
   end
 
   def calculate_bank
-    self.bank = current_user.contracts.sum(:gain_loss)
+    self.bank = self.bank += self.contracts.sum(:gain_loss)
+    self.update_attributes(:bank => bank)
   end
 end
